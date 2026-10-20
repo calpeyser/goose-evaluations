@@ -1,0 +1,33 @@
+## ninja_harness on large (full)
+### by shared object
+    55.73%  ninja_harness        
+    37.09%  libc.so.6            
+     6.56%  libstdc++.so.6.0.33  
+     0.53%  [unknown]            
+     0.08%  ld-linux-aarch64.so.1
+### top symbols
+    10.41%  [.] State::LookupNode
+    10.21%  [.] Lexer::ReadEvalString
+     7.80%  [.] __memchr_generic
+     7.09%  [.] malloc
+     6.96%  [.] main
+     5.19%  [.] _int_free
+     4.60%  [.] CanonicalizePath
+     4.38%  [.] _int_malloc
+     3.83%  [.] rapidhash_internal
+     3.24%  [.] ManifestParser::Parse
+     3.18%  [.] memcmp
+     2.98%  [.] cfree@GLIBC_2.17
+     2.84%  [.] __GI___memcpy_sve
+     2.73%  [.] Depth
+     2.13%  [.] malloc_consolidate
+     2.11%  [.] EvalString::AddText
+     1.90%  [.] EdgeEnv::LookupVariable[abi:cxx11]
+     1.39%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate
+     1.36%  [.] unlink_chunk.constprop.0
+     1.33%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace
+     1.28%  [.] Lexer::EatWhitespace
+     1.13%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create
+     0.90%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>
+     0.84%  [.] State::GetNode
+     0.79%  [.] BindingEnv::LookupRule

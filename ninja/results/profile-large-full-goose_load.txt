@@ -1,0 +1,32 @@
+## goose_load on large (full)
+### by shared object
+    98.37%  goose_load           
+     0.87%  libc.so.6            
+     0.75%  [unknown]            
+     0.01%  ld-linux-aarch64.so.1
+### top symbols
+    39.51%  [.] scan_g.constprop.0
+    30.41%  [.] intern_g.constprop.0
+     9.61%  [.] main
+     3.91%  [.] hash_lanes_g_76
+     2.73%  [.] gs_memeq_long
+     2.62%  [.] skip_spaces_g.constprop.0
+     2.00%  [.] scan_paths_g.constprop.0
+     1.88%  [.] depth_g.constprop.0
+     1.67%  [.] parse_range_g.constprop.0
+     0.99%  [.] read_ident_g.constprop.0
+     0.91%  [.] lookup_var_g_36.isra.0
+     0.83%  [.] __GI___memcpy_sve
+     0.74%  [k] 0xffff800080e23b84
+     0.47%  [.] hash_g_7.part.0
+     0.39%  [.] append_ins_g.constprop.0
+     0.30%  [.] eval_into_g_35.isra.0
+     0.26%  [.] gs_memcpy
+     0.24%  [.] dict_grow_g_50.constprop.0
+     0.17%  [.] gs_memeq.part.0
+     0.13%  [.] new_node_g.constprop.0
+     0.09%  [.] hash_le64_g_9.constprop.0
+     0.04%  [.] memset@plt
+     0.04%  [.] expect_newline_g.constprop.0
+     0.03%  [.] _IO_fread
+     0.01%  [k] 0xffff800080e24ba8

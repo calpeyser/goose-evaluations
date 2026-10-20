@@ -1,0 +1,43 @@
+#!/bin/bash
+# Build everything the four evaluations need, at the pinned commits:
+#   perf (if the machine has none), a Python venv with PyYAML, goose, then each
+#   evaluation's baselines and rows (<eval>/scripts/build.sh).
+# Usage: bin/build-all [ninja json yaml jq]
+# Needs: git, gcc/g++ 11 or newer, make, python3, curl, and cargo (Rust) for n2 and jaq.
+set -euo pipefail
+source "$(dirname "$0")/env.sh"
+mkdir -p "$DEPS" "$OUT/logs"
+EVALS=${*:-ninja json yaml jq}
+
+# perf: use the system one if it can count user cycles; else unpack the distro package (no root).
+if ! "$PERF" stat -e cycles:u true >/dev/null 2>&1; then
+  log "perf: unpacking the distribution package into $DEPS/perf"
+  rm -rf "$DEPS/perf"; mkdir -p "$DEPS/perf"
+  (cd "$DEPS/perf" && dnf download -q --setopt=cachedir="$DEPS/perf/cache" perf && rpm2cpio perf-*.rpm | cpio -idm --quiet)
+  export PERF=$DEPS/perf/usr/bin/perf
+  "$PERF" stat -e cycles:u true >/dev/null 2>&1 || { echo "perf cannot count cycles:u here (perf_event_paranoid?)"; exit 1; }
+fi
+log "perf: $("$PERF" --version)"
+
+# Python with PyYAML (the YAML reference) and cmake/ninja for the C++ baselines.
+if [ ! -x "$DEPS/venv/bin/python" ]; then
+  python3 -m venv "$DEPS/venv"
+  "$DEPS/venv/bin/pip" install -q --upgrade pip
+  "$DEPS/venv/bin/pip" install -q pyyaml==6.0.3 cmake ninja
+fi
+log "python: $("$PY" --version), cmake: $(cmake --version | head -1)"
+
+# goose at the pinned commit, Release build (about 5 minutes on 2 cores).
+fetch_repo goose aardappel/goose "$GOOSE_COMMIT"
+if [ ! -x "$GOOSE" ]; then
+  log "goose: building $GOOSE_COMMIT"
+  (cd "$DEPS/goose" && cmake -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build -j"$(nproc)") > "$OUT/logs/build-goose.log" 2>&1
+fi
+log "goose: $(git -C "$DEPS/goose" rev-parse --short HEAD)"
+
+for e in $EVALS; do
+  log "$e: building baselines and rows"
+  "$ROOT/$e/scripts/build.sh" > "$OUT/logs/build-$e.log" 2>&1 || { echo "$e build failed; see $OUT/logs/build-$e.log"; tail -20 "$OUT/logs/build-$e.log"; exit 1; }
+  tail -1 "$OUT/logs/build-$e.log"
+done
+log "build-all done"

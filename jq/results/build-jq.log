@@ -1,0 +1,679 @@
++ CFLAGS=-O2
++ ./configure --disable-docs --with-oniguruma=builtin --prefix=jq-install
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking how to run the C preprocessor... gcc -E
+checking for bison... no
+checking for byacc... no
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1966080
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for memmem... yes
+checking for sys/cygwin.h... no
+checking for shlwapi.h... no
+checking for pipenv... no
+checking whether gcc is Clang... no
+checking whether pthreads work with "-pthread" and "-lpthread"... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for isatty... yes
+checking for _isatty... no
+checking for strptime... yes
+checking for strftime... yes
+checking for setenv... yes
+checking for timegm... yes
+checking for gmtime_r... yes
+checking for gmtime... yes
+checking for localtime_r... yes
+checking for localtime... yes
+checking for gettimeofday... yes
+checking for struct tm.tm_gmtoff... yes
+checking for struct tm.__tm_gmtoff... no
+checking for setlocale... yes
+checking for arc4random... no
+checking for getentropy... yes
+checking for pthread_key_create... yes
+checking for pthread_once... yes
+checking for atexit... yes
+checking for acos in -lm... yes
+checking for acosh in -lm... yes
+checking for asin in -lm... yes
+checking for asinh in -lm... yes
+checking for atan2 in -lm... yes
+checking for atan in -lm... yes
+checking for atanh in -lm... yes
+checking for cbrt in -lm... yes
+checking for ceil in -lm... yes
+checking for copysign in -lm... yes
+checking for cos in -lm... yes
+checking for cosh in -lm... yes
+checking for drem in -lm... yes
+checking for erf in -lm... yes
+checking for erfc in -lm... yes
+checking for exp10 in -lm... yes
+checking for __exp10 in -lm... no
+checking for exp2 in -lm... yes
+checking for exp in -lm... yes
+checking for expm1 in -lm... yes
+checking for fabs in -lm... yes
+checking for fdim in -lm... yes
+checking for floor in -lm... yes
+checking for fma in -lm... yes
+checking for fmax in -lm... yes
+checking for fmin in -lm... yes
+checking for fmod in -lm... yes
+checking for frexp in -lm... yes
+checking for gamma in -lm... yes
+checking for hypot in -lm... yes
+checking for j0 in -lm... yes
+checking for j1 in -lm... yes
+checking for jn in -lm... yes
+checking for ldexp in -lm... yes
+checking for lgamma in -lm... yes
+checking for log10 in -lm... yes
+checking for log1p in -lm... yes
+checking for log2 in -lm... yes
+checking for log in -lm... yes
+checking for logb in -lm... yes
+checking for modf in -lm... yes
+checking for lgamma_r in -lm... yes
+checking for nearbyint in -lm... yes
+checking for nextafter in -lm... yes
+checking for nexttoward in -lm... yes
+checking for pow in -lm... yes
+checking for remainder in -lm... yes
+checking for rint in -lm... yes
+checking for round in -lm... yes
+checking for scalb in -lm... yes
+checking for scalbln in -lm... yes
+checking for significand in -lm... yes
+checking for scalbn in -lm... yes
+checking for ilogb in -lm... yes
+checking for sin in -lm... yes
+checking for sinh in -lm... yes
+checking for sqrt in -lm... yes
+checking for tan in -lm... yes
+checking for tanh in -lm... yes
+checking for tgamma in -lm... yes
+checking for trunc in -lm... yes
+checking for y0 in -lm... yes
+checking for y1 in -lm... yes
+checking for yn in -lm... yes
+checking for thread-local storage... yes
+checking whether byte ordering is bigendian... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libjq.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in vendor/oniguruma (jq-1.8.2/vendor/oniguruma)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=jq-install'  '--disable-docs' '--with-oniguruma=builtin' 'CFLAGS=-O2' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1966080
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/times.h... yes
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of void*... 8
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating test/Makefile
+config.status: creating sample/Makefile
+config.status: creating onig-config
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing default commands
++ make -j2
+mkdir -p src
+mkdir -p src
+  GEN      src/builtin.inc
+  GEN      src/config_opts.inc
+mkdir -p src
+  GEN      src/version.h
+make  all-recursive
+make[1]: Entering directory 'jq-1.8.2'
+Making all in vendor/oniguruma
+make[2]: Entering directory 'jq-1.8.2/vendor/oniguruma'
+Making all in src
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/src'
+make  all-am
+make[4]: Entering directory 'jq-1.8.2/vendor/oniguruma/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regparse.lo -MD -MP -MF .deps/regparse.Tpo -c -o regparse.lo regparse.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regcomp.lo -MD -MP -MF .deps/regcomp.Tpo -c -o regcomp.lo regcomp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regparse.lo -MD -MP -MF .deps/regparse.Tpo -c regparse.c  -fPIC -DPIC -o .libs/regparse.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regcomp.lo -MD -MP -MF .deps/regcomp.Tpo -c regcomp.c  -fPIC -DPIC -o .libs/regcomp.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regcomp.lo -MD -MP -MF .deps/regcomp.Tpo -c regcomp.c -o regcomp.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regparse.lo -MD -MP -MF .deps/regparse.Tpo -c regparse.c -o regparse.o >/dev/null 2>&1
+mv -f .deps/regcomp.Tpo .deps/regcomp.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regexec.lo -MD -MP -MF .deps/regexec.Tpo -c -o regexec.lo regexec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regexec.lo -MD -MP -MF .deps/regexec.Tpo -c regexec.c  -fPIC -DPIC -o .libs/regexec.o
+mv -f .deps/regparse.Tpo .deps/regparse.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regenc.lo -MD -MP -MF .deps/regenc.Tpo -c -o regenc.lo regenc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regenc.lo -MD -MP -MF .deps/regenc.Tpo -c regenc.c  -fPIC -DPIC -o .libs/regenc.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regexec.lo -MD -MP -MF .deps/regexec.Tpo -c regexec.c -o regexec.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regenc.lo -MD -MP -MF .deps/regenc.Tpo -c regenc.c -o regenc.o >/dev/null 2>&1
+mv -f .deps/regenc.Tpo .deps/regenc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regerror.lo -MD -MP -MF .deps/regerror.Tpo -c -o regerror.lo regerror.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regerror.lo -MD -MP -MF .deps/regerror.Tpo -c regerror.c  -fPIC -DPIC -o .libs/regerror.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regerror.lo -MD -MP -MF .deps/regerror.Tpo -c regerror.c -o regerror.o >/dev/null 2>&1
+mv -f .deps/regerror.Tpo .deps/regerror.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regext.lo -MD -MP -MF .deps/regext.Tpo -c -o regext.lo regext.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regext.lo -MD -MP -MF .deps/regext.Tpo -c regext.c  -fPIC -DPIC -o .libs/regext.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regext.lo -MD -MP -MF .deps/regext.Tpo -c regext.c -o regext.o >/dev/null 2>&1
+mv -f .deps/regext.Tpo .deps/regext.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regsyntax.lo -MD -MP -MF .deps/regsyntax.Tpo -c -o regsyntax.lo regsyntax.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regsyntax.lo -MD -MP -MF .deps/regsyntax.Tpo -c regsyntax.c  -fPIC -DPIC -o .libs/regsyntax.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regsyntax.lo -MD -MP -MF .deps/regsyntax.Tpo -c regsyntax.c -o regsyntax.o >/dev/null 2>&1
+mv -f .deps/regsyntax.Tpo .deps/regsyntax.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regtrav.lo -MD -MP -MF .deps/regtrav.Tpo -c -o regtrav.lo regtrav.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regtrav.lo -MD -MP -MF .deps/regtrav.Tpo -c regtrav.c  -fPIC -DPIC -o .libs/regtrav.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regtrav.lo -MD -MP -MF .deps/regtrav.Tpo -c regtrav.c -o regtrav.o >/dev/null 2>&1
+mv -f .deps/regtrav.Tpo .deps/regtrav.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT regversion.lo -MD -MP -MF .deps/regversion.Tpo -c -o regversion.lo regversion.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regversion.lo -MD -MP -MF .deps/regversion.Tpo -c regversion.c  -fPIC -DPIC -o .libs/regversion.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT regversion.lo -MD -MP -MF .deps/regversion.Tpo -c regversion.c -o regversion.o >/dev/null 2>&1
+mv -f .deps/regversion.Tpo .deps/regversion.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT st.lo -MD -MP -MF .deps/st.Tpo -c -o st.lo st.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT st.lo -MD -MP -MF .deps/st.Tpo -c st.c  -fPIC -DPIC -o .libs/st.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT st.lo -MD -MP -MF .deps/st.Tpo -c st.c -o st.o >/dev/null 2>&1
+mv -f .deps/st.Tpo .deps/st.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT reggnu.lo -MD -MP -MF .deps/reggnu.Tpo -c -o reggnu.lo reggnu.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT reggnu.lo -MD -MP -MF .deps/reggnu.Tpo -c reggnu.c  -fPIC -DPIC -o .libs/reggnu.o
+mv -f .deps/regexec.Tpo .deps/regexec.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT unicode.lo -MD -MP -MF .deps/unicode.Tpo -c -o unicode.lo unicode.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT reggnu.lo -MD -MP -MF .deps/reggnu.Tpo -c reggnu.c -o reggnu.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode.lo -MD -MP -MF .deps/unicode.Tpo -c unicode.c  -fPIC -DPIC -o .libs/unicode.o
+mv -f .deps/reggnu.Tpo .deps/reggnu.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT unicode_unfold_key.lo -MD -MP -MF .deps/unicode_unfold_key.Tpo -c -o unicode_unfold_key.lo unicode_unfold_key.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_unfold_key.lo -MD -MP -MF .deps/unicode_unfold_key.Tpo -c unicode_unfold_key.c  -fPIC -DPIC -o .libs/unicode_unfold_key.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_unfold_key.lo -MD -MP -MF .deps/unicode_unfold_key.Tpo -c unicode_unfold_key.c -o unicode_unfold_key.o >/dev/null 2>&1
+mv -f .deps/unicode_unfold_key.Tpo .deps/unicode_unfold_key.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT unicode_fold1_key.lo -MD -MP -MF .deps/unicode_fold1_key.Tpo -c -o unicode_fold1_key.lo unicode_fold1_key.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold1_key.lo -MD -MP -MF .deps/unicode_fold1_key.Tpo -c unicode_fold1_key.c  -fPIC -DPIC -o .libs/unicode_fold1_key.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold1_key.lo -MD -MP -MF .deps/unicode_fold1_key.Tpo -c unicode_fold1_key.c -o unicode_fold1_key.o >/dev/null 2>&1
+mv -f .deps/unicode_fold1_key.Tpo .deps/unicode_fold1_key.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT unicode_fold2_key.lo -MD -MP -MF .deps/unicode_fold2_key.Tpo -c -o unicode_fold2_key.lo unicode_fold2_key.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold2_key.lo -MD -MP -MF .deps/unicode_fold2_key.Tpo -c unicode_fold2_key.c  -fPIC -DPIC -o .libs/unicode_fold2_key.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold2_key.lo -MD -MP -MF .deps/unicode_fold2_key.Tpo -c unicode_fold2_key.c -o unicode_fold2_key.o >/dev/null 2>&1
+mv -f .deps/unicode_fold2_key.Tpo .deps/unicode_fold2_key.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT unicode_fold3_key.lo -MD -MP -MF .deps/unicode_fold3_key.Tpo -c -o unicode_fold3_key.lo unicode_fold3_key.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold3_key.lo -MD -MP -MF .deps/unicode_fold3_key.Tpo -c unicode_fold3_key.c  -fPIC -DPIC -o .libs/unicode_fold3_key.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode.lo -MD -MP -MF .deps/unicode.Tpo -c unicode.c -o unicode.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT unicode_fold3_key.lo -MD -MP -MF .deps/unicode_fold3_key.Tpo -c unicode_fold3_key.c -o unicode_fold3_key.o >/dev/null 2>&1
+mv -f .deps/unicode_fold3_key.Tpo .deps/unicode_fold3_key.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT ascii.lo -MD -MP -MF .deps/ascii.Tpo -c -o ascii.lo ascii.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT ascii.lo -MD -MP -MF .deps/ascii.Tpo -c ascii.c  -fPIC -DPIC -o .libs/ascii.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT ascii.lo -MD -MP -MF .deps/ascii.Tpo -c ascii.c -o ascii.o >/dev/null 2>&1
+mv -f .deps/ascii.Tpo .deps/ascii.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT utf8.lo -MD -MP -MF .deps/utf8.Tpo -c -o utf8.lo utf8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf8.lo -MD -MP -MF .deps/utf8.Tpo -c utf8.c  -fPIC -DPIC -o .libs/utf8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf8.lo -MD -MP -MF .deps/utf8.Tpo -c utf8.c -o utf8.o >/dev/null 2>&1
+mv -f .deps/utf8.Tpo .deps/utf8.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT utf16_be.lo -MD -MP -MF .deps/utf16_be.Tpo -c -o utf16_be.lo utf16_be.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf16_be.lo -MD -MP -MF .deps/utf16_be.Tpo -c utf16_be.c  -fPIC -DPIC -o .libs/utf16_be.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf16_be.lo -MD -MP -MF .deps/utf16_be.Tpo -c utf16_be.c -o utf16_be.o >/dev/null 2>&1
+mv -f .deps/unicode.Tpo .deps/unicode.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT utf16_le.lo -MD -MP -MF .deps/utf16_le.Tpo -c -o utf16_le.lo utf16_le.c
+mv -f .deps/utf16_be.Tpo .deps/utf16_be.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT utf32_be.lo -MD -MP -MF .deps/utf32_be.Tpo -c -o utf32_be.lo utf32_be.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf16_le.lo -MD -MP -MF .deps/utf16_le.Tpo -c utf16_le.c  -fPIC -DPIC -o .libs/utf16_le.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf32_be.lo -MD -MP -MF .deps/utf32_be.Tpo -c utf32_be.c  -fPIC -DPIC -o .libs/utf32_be.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf32_be.lo -MD -MP -MF .deps/utf32_be.Tpo -c utf32_be.c -o utf32_be.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf16_le.lo -MD -MP -MF .deps/utf16_le.Tpo -c utf16_le.c -o utf16_le.o >/dev/null 2>&1
+mv -f .deps/utf32_be.Tpo .deps/utf32_be.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT utf32_le.lo -MD -MP -MF .deps/utf32_le.Tpo -c -o utf32_le.lo utf32_le.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf32_le.lo -MD -MP -MF .deps/utf32_le.Tpo -c utf32_le.c  -fPIC -DPIC -o .libs/utf32_le.o
+mv -f .deps/utf16_le.Tpo .deps/utf16_le.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT euc_jp.lo -MD -MP -MF .deps/euc_jp.Tpo -c -o euc_jp.lo euc_jp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_jp.lo -MD -MP -MF .deps/euc_jp.Tpo -c euc_jp.c  -fPIC -DPIC -o .libs/euc_jp.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT utf32_le.lo -MD -MP -MF .deps/utf32_le.Tpo -c utf32_le.c -o utf32_le.o >/dev/null 2>&1
+mv -f .deps/utf32_le.Tpo .deps/utf32_le.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT euc_jp_prop.lo -MD -MP -MF .deps/euc_jp_prop.Tpo -c -o euc_jp_prop.lo euc_jp_prop.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_jp_prop.lo -MD -MP -MF .deps/euc_jp_prop.Tpo -c euc_jp_prop.c  -fPIC -DPIC -o .libs/euc_jp_prop.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_jp.lo -MD -MP -MF .deps/euc_jp.Tpo -c euc_jp.c -o euc_jp.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_jp_prop.lo -MD -MP -MF .deps/euc_jp_prop.Tpo -c euc_jp_prop.c -o euc_jp_prop.o >/dev/null 2>&1
+mv -f .deps/euc_jp_prop.Tpo .deps/euc_jp_prop.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT sjis.lo -MD -MP -MF .deps/sjis.Tpo -c -o sjis.lo sjis.c
+mv -f .deps/euc_jp.Tpo .deps/euc_jp.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT sjis_prop.lo -MD -MP -MF .deps/sjis_prop.Tpo -c -o sjis_prop.lo sjis_prop.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT sjis.lo -MD -MP -MF .deps/sjis.Tpo -c sjis.c  -fPIC -DPIC -o .libs/sjis.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT sjis_prop.lo -MD -MP -MF .deps/sjis_prop.Tpo -c sjis_prop.c  -fPIC -DPIC -o .libs/sjis_prop.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT sjis_prop.lo -MD -MP -MF .deps/sjis_prop.Tpo -c sjis_prop.c -o sjis_prop.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT sjis.lo -MD -MP -MF .deps/sjis.Tpo -c sjis.c -o sjis.o >/dev/null 2>&1
+mv -f .deps/sjis_prop.Tpo .deps/sjis_prop.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_1.lo -MD -MP -MF .deps/iso8859_1.Tpo -c -o iso8859_1.lo iso8859_1.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_1.lo -MD -MP -MF .deps/iso8859_1.Tpo -c iso8859_1.c  -fPIC -DPIC -o .libs/iso8859_1.o
+mv -f .deps/sjis.Tpo .deps/sjis.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_2.lo -MD -MP -MF .deps/iso8859_2.Tpo -c -o iso8859_2.lo iso8859_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_1.lo -MD -MP -MF .deps/iso8859_1.Tpo -c iso8859_1.c -o iso8859_1.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_2.lo -MD -MP -MF .deps/iso8859_2.Tpo -c iso8859_2.c  -fPIC -DPIC -o .libs/iso8859_2.o
+mv -f .deps/iso8859_1.Tpo .deps/iso8859_1.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_3.lo -MD -MP -MF .deps/iso8859_3.Tpo -c -o iso8859_3.lo iso8859_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_2.lo -MD -MP -MF .deps/iso8859_2.Tpo -c iso8859_2.c -o iso8859_2.o >/dev/null 2>&1
+mv -f .deps/iso8859_2.Tpo .deps/iso8859_2.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_3.lo -MD -MP -MF .deps/iso8859_3.Tpo -c iso8859_3.c  -fPIC -DPIC -o .libs/iso8859_3.o
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_4.lo -MD -MP -MF .deps/iso8859_4.Tpo -c -o iso8859_4.lo iso8859_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_3.lo -MD -MP -MF .deps/iso8859_3.Tpo -c iso8859_3.c -o iso8859_3.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_4.lo -MD -MP -MF .deps/iso8859_4.Tpo -c iso8859_4.c  -fPIC -DPIC -o .libs/iso8859_4.o
+mv -f .deps/iso8859_3.Tpo .deps/iso8859_3.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_5.lo -MD -MP -MF .deps/iso8859_5.Tpo -c -o iso8859_5.lo iso8859_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_4.lo -MD -MP -MF .deps/iso8859_4.Tpo -c iso8859_4.c -o iso8859_4.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_5.lo -MD -MP -MF .deps/iso8859_5.Tpo -c iso8859_5.c  -fPIC -DPIC -o .libs/iso8859_5.o
+mv -f .deps/iso8859_4.Tpo .deps/iso8859_4.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_6.lo -MD -MP -MF .deps/iso8859_6.Tpo -c -o iso8859_6.lo iso8859_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_5.lo -MD -MP -MF .deps/iso8859_5.Tpo -c iso8859_5.c -o iso8859_5.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_6.lo -MD -MP -MF .deps/iso8859_6.Tpo -c iso8859_6.c  -fPIC -DPIC -o .libs/iso8859_6.o
+mv -f .deps/iso8859_5.Tpo .deps/iso8859_5.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_7.lo -MD -MP -MF .deps/iso8859_7.Tpo -c -o iso8859_7.lo iso8859_7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_6.lo -MD -MP -MF .deps/iso8859_6.Tpo -c iso8859_6.c -o iso8859_6.o >/dev/null 2>&1
+mv -f .deps/iso8859_6.Tpo .deps/iso8859_6.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_8.lo -MD -MP -MF .deps/iso8859_8.Tpo -c -o iso8859_8.lo iso8859_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_7.lo -MD -MP -MF .deps/iso8859_7.Tpo -c iso8859_7.c  -fPIC -DPIC -o .libs/iso8859_7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_8.lo -MD -MP -MF .deps/iso8859_8.Tpo -c iso8859_8.c  -fPIC -DPIC -o .libs/iso8859_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_7.lo -MD -MP -MF .deps/iso8859_7.Tpo -c iso8859_7.c -o iso8859_7.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_8.lo -MD -MP -MF .deps/iso8859_8.Tpo -c iso8859_8.c -o iso8859_8.o >/dev/null 2>&1
+mv -f .deps/iso8859_7.Tpo .deps/iso8859_7.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_9.lo -MD -MP -MF .deps/iso8859_9.Tpo -c -o iso8859_9.lo iso8859_9.c
+mv -f .deps/iso8859_8.Tpo .deps/iso8859_8.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_10.lo -MD -MP -MF .deps/iso8859_10.Tpo -c -o iso8859_10.lo iso8859_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_9.lo -MD -MP -MF .deps/iso8859_9.Tpo -c iso8859_9.c  -fPIC -DPIC -o .libs/iso8859_9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_10.lo -MD -MP -MF .deps/iso8859_10.Tpo -c iso8859_10.c  -fPIC -DPIC -o .libs/iso8859_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_9.lo -MD -MP -MF .deps/iso8859_9.Tpo -c iso8859_9.c -o iso8859_9.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_10.lo -MD -MP -MF .deps/iso8859_10.Tpo -c iso8859_10.c -o iso8859_10.o >/dev/null 2>&1
+mv -f .deps/iso8859_9.Tpo .deps/iso8859_9.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_11.lo -MD -MP -MF .deps/iso8859_11.Tpo -c -o iso8859_11.lo iso8859_11.c
+mv -f .deps/iso8859_10.Tpo .deps/iso8859_10.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_13.lo -MD -MP -MF .deps/iso8859_13.Tpo -c -o iso8859_13.lo iso8859_13.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_11.lo -MD -MP -MF .deps/iso8859_11.Tpo -c iso8859_11.c  -fPIC -DPIC -o .libs/iso8859_11.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_13.lo -MD -MP -MF .deps/iso8859_13.Tpo -c iso8859_13.c  -fPIC -DPIC -o .libs/iso8859_13.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_11.lo -MD -MP -MF .deps/iso8859_11.Tpo -c iso8859_11.c -o iso8859_11.o >/dev/null 2>&1
+mv -f .deps/iso8859_11.Tpo .deps/iso8859_11.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_14.lo -MD -MP -MF .deps/iso8859_14.Tpo -c -o iso8859_14.lo iso8859_14.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_13.lo -MD -MP -MF .deps/iso8859_13.Tpo -c iso8859_13.c -o iso8859_13.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_14.lo -MD -MP -MF .deps/iso8859_14.Tpo -c iso8859_14.c  -fPIC -DPIC -o .libs/iso8859_14.o
+mv -f .deps/iso8859_13.Tpo .deps/iso8859_13.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_15.lo -MD -MP -MF .deps/iso8859_15.Tpo -c -o iso8859_15.lo iso8859_15.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_14.lo -MD -MP -MF .deps/iso8859_14.Tpo -c iso8859_14.c -o iso8859_14.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_15.lo -MD -MP -MF .deps/iso8859_15.Tpo -c iso8859_15.c  -fPIC -DPIC -o .libs/iso8859_15.o
+mv -f .deps/iso8859_14.Tpo .deps/iso8859_14.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT iso8859_16.lo -MD -MP -MF .deps/iso8859_16.Tpo -c -o iso8859_16.lo iso8859_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_15.lo -MD -MP -MF .deps/iso8859_15.Tpo -c iso8859_15.c -o iso8859_15.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_16.lo -MD -MP -MF .deps/iso8859_16.Tpo -c iso8859_16.c  -fPIC -DPIC -o .libs/iso8859_16.o
+mv -f .deps/iso8859_15.Tpo .deps/iso8859_15.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT euc_tw.lo -MD -MP -MF .deps/euc_tw.Tpo -c -o euc_tw.lo euc_tw.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT iso8859_16.lo -MD -MP -MF .deps/iso8859_16.Tpo -c iso8859_16.c -o iso8859_16.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_tw.lo -MD -MP -MF .deps/euc_tw.Tpo -c euc_tw.c  -fPIC -DPIC -o .libs/euc_tw.o
+mv -f .deps/iso8859_16.Tpo .deps/iso8859_16.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT euc_kr.lo -MD -MP -MF .deps/euc_kr.Tpo -c -o euc_kr.lo euc_kr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_tw.lo -MD -MP -MF .deps/euc_tw.Tpo -c euc_tw.c -o euc_tw.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_kr.lo -MD -MP -MF .deps/euc_kr.Tpo -c euc_kr.c  -fPIC -DPIC -o .libs/euc_kr.o
+mv -f .deps/euc_tw.Tpo .deps/euc_tw.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT big5.lo -MD -MP -MF .deps/big5.Tpo -c -o big5.lo big5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT euc_kr.lo -MD -MP -MF .deps/euc_kr.Tpo -c euc_kr.c -o euc_kr.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT big5.lo -MD -MP -MF .deps/big5.Tpo -c big5.c  -fPIC -DPIC -o .libs/big5.o
+mv -f .deps/euc_kr.Tpo .deps/euc_kr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT gb18030.lo -MD -MP -MF .deps/gb18030.Tpo -c -o gb18030.lo gb18030.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT big5.lo -MD -MP -MF .deps/big5.Tpo -c big5.c -o big5.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT gb18030.lo -MD -MP -MF .deps/gb18030.Tpo -c gb18030.c  -fPIC -DPIC -o .libs/gb18030.o
+mv -f .deps/big5.Tpo .deps/big5.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT koi8_r.lo -MD -MP -MF .deps/koi8_r.Tpo -c -o koi8_r.lo koi8_r.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT koi8_r.lo -MD -MP -MF .deps/koi8_r.Tpo -c koi8_r.c  -fPIC -DPIC -o .libs/koi8_r.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT gb18030.lo -MD -MP -MF .deps/gb18030.Tpo -c gb18030.c -o gb18030.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT koi8_r.lo -MD -MP -MF .deps/koi8_r.Tpo -c koi8_r.c -o koi8_r.o >/dev/null 2>&1
+mv -f .deps/koi8_r.Tpo .deps/koi8_r.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT cp1251.lo -MD -MP -MF .deps/cp1251.Tpo -c -o cp1251.lo cp1251.c
+mv -f .deps/gb18030.Tpo .deps/gb18030.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I..  -Wall   -O2 -MT onig_init.lo -MD -MP -MF .deps/onig_init.Tpo -c -o onig_init.lo onig_init.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT cp1251.lo -MD -MP -MF .deps/cp1251.Tpo -c cp1251.c  -fPIC -DPIC -o .libs/cp1251.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT onig_init.lo -MD -MP -MF .deps/onig_init.Tpo -c onig_init.c  -fPIC -DPIC -o .libs/onig_init.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT cp1251.lo -MD -MP -MF .deps/cp1251.Tpo -c cp1251.c -o cp1251.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -Wall -O2 -MT onig_init.lo -MD -MP -MF .deps/onig_init.Tpo -c onig_init.c -o onig_init.o >/dev/null 2>&1
+mv -f .deps/cp1251.Tpo .deps/cp1251.Plo
+mv -f .deps/onig_init.Tpo .deps/onig_init.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc -Wall   -O2  -version-info 10:0:5   -o libonig.la -rpath jq-install/lib regparse.lo regcomp.lo regexec.lo regenc.lo regerror.lo regext.lo regsyntax.lo regtrav.lo regversion.lo st.lo reggnu.lo  unicode.lo unicode_unfold_key.lo unicode_fold1_key.lo unicode_fold2_key.lo unicode_fold3_key.lo ascii.lo utf8.lo utf16_be.lo utf16_le.lo utf32_be.lo utf32_le.lo euc_jp.lo euc_jp_prop.lo sjis.lo sjis_prop.lo iso8859_1.lo iso8859_2.lo iso8859_3.lo iso8859_4.lo iso8859_5.lo iso8859_6.lo iso8859_7.lo iso8859_8.lo iso8859_9.lo iso8859_10.lo iso8859_11.lo iso8859_13.lo iso8859_14.lo iso8859_15.lo iso8859_16.lo euc_tw.lo euc_kr.lo big5.lo gb18030.lo koi8_r.lo cp1251.lo onig_init.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/regparse.o .libs/regcomp.o .libs/regexec.o .libs/regenc.o .libs/regerror.o .libs/regext.o .libs/regsyntax.o .libs/regtrav.o .libs/regversion.o .libs/st.o .libs/reggnu.o .libs/unicode.o .libs/unicode_unfold_key.o .libs/unicode_fold1_key.o .libs/unicode_fold2_key.o .libs/unicode_fold3_key.o .libs/ascii.o .libs/utf8.o .libs/utf16_be.o .libs/utf16_le.o .libs/utf32_be.o .libs/utf32_le.o .libs/euc_jp.o .libs/euc_jp_prop.o .libs/sjis.o .libs/sjis_prop.o .libs/iso8859_1.o .libs/iso8859_2.o .libs/iso8859_3.o .libs/iso8859_4.o .libs/iso8859_5.o .libs/iso8859_6.o .libs/iso8859_7.o .libs/iso8859_8.o .libs/iso8859_9.o .libs/iso8859_10.o .libs/iso8859_11.o .libs/iso8859_13.o .libs/iso8859_14.o .libs/iso8859_15.o .libs/iso8859_16.o .libs/euc_tw.o .libs/euc_kr.o .libs/big5.o .libs/gb18030.o .libs/koi8_r.o .libs/cp1251.o .libs/onig_init.o    -O2   -Wl,-soname -Wl,libonig.so.5 -o .libs/libonig.so.5.5.0
+libtool: link: (cd ".libs" && rm -f "libonig.so.5" && ln -s "libonig.so.5.5.0" "libonig.so.5")
+libtool: link: (cd ".libs" && rm -f "libonig.so" && ln -s "libonig.so.5.5.0" "libonig.so")
+libtool: link: ar cr .libs/libonig.a  regparse.o regcomp.o regexec.o regenc.o regerror.o regext.o regsyntax.o regtrav.o regversion.o st.o reggnu.o unicode.o unicode_unfold_key.o unicode_fold1_key.o unicode_fold2_key.o unicode_fold3_key.o ascii.o utf8.o utf16_be.o utf16_le.o utf32_be.o utf32_le.o euc_jp.o euc_jp_prop.o sjis.o sjis_prop.o iso8859_1.o iso8859_2.o iso8859_3.o iso8859_4.o iso8859_5.o iso8859_6.o iso8859_7.o iso8859_8.o iso8859_9.o iso8859_10.o iso8859_11.o iso8859_13.o iso8859_14.o iso8859_15.o iso8859_16.o euc_tw.o euc_kr.o big5.o gb18030.o koi8_r.o cp1251.o onig_init.o
+libtool: link: ranlib .libs/libonig.a
+libtool: link: ( cd ".libs" && rm -f "libonig.la" && ln -s "../libonig.la" "libonig.la" )
+make[4]: Leaving directory 'jq-1.8.2/vendor/oniguruma/src'
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/src'
+Making all in test
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/test'
+Making all in sample
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma'
+sed -e 's,[@]datadir[@],jq-install/share,g' -e 's,[@]datarootdir[@],jq-install/share,g' -e 's,[@]PACKAGE_VERSION[@],6.9.10,g' -e 's,[@]prefix[@],jq-install,g' -e 's,[@]exec_prefix[@],jq-install,g' -e 's,[@]libdir[@],jq-install/lib,g' -e 's,[@]includedir[@],jq-install/include,g' < ./oniguruma.pc.in > oniguruma.pc
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma'
+make[2]: Leaving directory 'jq-1.8.2/vendor/oniguruma'
+make[2]: Entering directory 'jq-1.8.2'
+  CC       src/lexer.lo
+  CC       src/parser.lo
+mkdir -p src
+  GEN      src/version.h
+  CC       src/builtin.lo
+  CC       src/bytecode.lo
+  CC       src/compile.lo
+  CC       src/execute.lo
+  CC       src/jq_test.lo
+  CC       src/jv.lo
+  CC       src/jv_alloc.lo
+  CC       src/jv_aux.lo
+  CC       src/jv_dtoa.lo
+  CC       src/jv_file.lo
+  CC       src/jv_parse.lo
+  CC       src/jv_print.lo
+  CC       src/jv_unicode.lo
+  CC       src/linker.lo
+  CC       src/locfile.lo
+  CC       src/util.lo
+  CC       src/jv_dtoa_tsd.lo
+  CC       vendor/decNumber/decContext.lo
+  CC       vendor/decNumber/decNumber.lo
+  CC       src/main.o
+  CCLD     libjq.la
+  CCLD     jq
+make[2]: Leaving directory 'jq-1.8.2'
+make[1]: Leaving directory 'jq-1.8.2'
++ make install
+mkdir -p src
+  GEN      src/version.h
+make  install-recursive
+make[1]: Entering directory 'jq-1.8.2'
+Making install in vendor/oniguruma
+make[2]: Entering directory 'jq-1.8.2/vendor/oniguruma'
+Making install in src
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/src'
+make[4]: Entering directory 'jq-1.8.2/vendor/oniguruma/src'
+ /usr/bin/mkdir -p 'jq-install/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libonig.la 'jq-install/lib'
+libtool: install: /usr/bin/install -c .libs/libonig.so.5.5.0 jq-install/lib/libonig.so.5.5.0
+libtool: install: (cd jq-install/lib && { ln -s -f libonig.so.5.5.0 libonig.so.5 || { rm -f libonig.so.5 && ln -s libonig.so.5.5.0 libonig.so.5; }; })
+libtool: install: (cd jq-install/lib && { ln -s -f libonig.so.5.5.0 libonig.so || { rm -f libonig.so && ln -s libonig.so.5.5.0 libonig.so; }; })
+libtool: install: /usr/bin/install -c .libs/libonig.lai jq-install/lib/libonig.la
+libtool: install: /usr/bin/install -c .libs/libonig.a jq-install/lib/libonig.a
+libtool: install: chmod 644 jq-install/lib/libonig.a
+libtool: install: ranlib jq-install/lib/libonig.a
+libtool: finish: PATH="~/.local/bin:~/bin:~/.local/bin:~/.nvm/versions/node/v22.23.3/bin:/usr/local/bin:/usr/bin:/bin:/sbin" ldconfig -n jq-install/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   jq-install/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p 'jq-install/include'
+ /usr/bin/install -c -m 644 oniguruma.h oniggnu.h 'jq-install/include'
+make  install-data-hook
+make[5]: Entering directory 'jq-1.8.2/vendor/oniguruma/src'
+make[5]: Nothing to be done for 'install-data-hook'.
+make[5]: Leaving directory 'jq-1.8.2/vendor/oniguruma/src'
+make[4]: Leaving directory 'jq-1.8.2/vendor/oniguruma/src'
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/src'
+Making install in test
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/test'
+make[4]: Entering directory 'jq-1.8.2/vendor/oniguruma/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory 'jq-1.8.2/vendor/oniguruma/test'
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/test'
+Making install in sample
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[4]: Entering directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma/sample'
+make[3]: Entering directory 'jq-1.8.2/vendor/oniguruma'
+make[4]: Entering directory 'jq-1.8.2/vendor/oniguruma'
+ /usr/bin/mkdir -p 'jq-install/bin'
+ /usr/bin/install -c onig-config 'jq-install/bin'
+ /usr/bin/mkdir -p 'jq-install/lib/pkgconfig'
+ /usr/bin/install -c -m 644 oniguruma.pc 'jq-install/lib/pkgconfig'
+make[4]: Leaving directory 'jq-1.8.2/vendor/oniguruma'
+make[3]: Leaving directory 'jq-1.8.2/vendor/oniguruma'
+make[2]: Leaving directory 'jq-1.8.2/vendor/oniguruma'
+make[2]: Entering directory 'jq-1.8.2'
+mkdir -p src
+  GEN      src/version.h
+  CC       src/main.o
+  CCLD     jq
+make[3]: Entering directory 'jq-1.8.2'
+mkdir -p src
+  GEN      src/version.h
+  CC       src/main.o
+  CCLD     jq
+ /usr/bin/mkdir -p 'jq-install/lib'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libjq.la 'jq-install/lib'
+libtool: warning: relinking 'libjq.la'
+libtool: install: (cd jq-1.8.2; /bin/sh "jq-1.8.2/libtool"  --silent --tag CC --mode=relink gcc -Wextra -Wall -Wno-unused-parameter -Wno-unused-function -Woverlength-strings -Wstrict-prototypes -I./vendor/oniguruma/src -O2 -pthread -L./vendor/oniguruma/src -Wl,-rpath,jq-install/lib -export-symbols-regex "^j[qv]_" -version-info 1:4:0 -o libjq.la -rpath jq-install/lib src/builtin.lo src/bytecode.lo src/compile.lo src/execute.lo src/jq_test.lo src/jv.lo src/jv_alloc.lo src/jv_aux.lo src/jv_dtoa.lo src/jv_file.lo src/jv_parse.lo src/jv_print.lo src/jv_unicode.lo src/linker.lo src/locfile.lo src/util.lo src/jv_dtoa_tsd.lo vendor/decNumber/decContext.lo vendor/decNumber/decNumber.lo src/lexer.lo src/parser.lo -lm vendor/oniguruma/src/.libs/libonig.la -lpthread )
+libtool: install: /usr/bin/install -c .libs/libjq.so.1.0.4T jq-install/lib/libjq.so.1.0.4
+libtool: install: (cd jq-install/lib && { ln -s -f libjq.so.1.0.4 libjq.so.1 || { rm -f libjq.so.1 && ln -s libjq.so.1.0.4 libjq.so.1; }; })
+libtool: install: (cd jq-install/lib && { ln -s -f libjq.so.1.0.4 libjq.so || { rm -f libjq.so && ln -s libjq.so.1.0.4 libjq.so; }; })
+libtool: install: /usr/bin/install -c .libs/libjq.lai jq-install/lib/libjq.la
+libtool: install: /usr/bin/install -c .libs/libjq.a jq-install/lib/libjq.a
+libtool: install: chmod 644 jq-install/lib/libjq.a
+libtool: install: ranlib jq-install/lib/libjq.a
+libtool: finish: PATH="~/.local/bin:~/bin:~/.local/bin:~/.nvm/versions/node/v22.23.3/bin:/usr/local/bin:/usr/bin:/bin:/sbin" ldconfig -n jq-install/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   jq-install/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p 'jq-install/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c jq 'jq-install/bin'
+libtool: install: /usr/bin/install -c .libs/jq jq-install/bin/jq
+ /usr/bin/mkdir -p 'jq-install/share/doc/jq'
+ /usr/bin/install -c -m 644 README.md NEWS.md COPYING AUTHORS 'jq-install/share/doc/jq'
+ /usr/bin/mkdir -p 'jq-install/include'
+ /usr/bin/install -c -m 644 src/jv.h src/jq.h 'jq-install/include'
+ /usr/bin/mkdir -p 'jq-install/share/man/man1'
+ /usr/bin/install -c -m 644 jq.1 'jq-install/share/man/man1'
+ /usr/bin/mkdir -p 'jq-install/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libjq.pc 'jq-install/lib/pkgconfig'
+make[3]: Leaving directory 'jq-1.8.2'
+make[2]: Leaving directory 'jq-1.8.2'
+make[1]: Leaving directory 'jq-1.8.2'
+
+real	0m24.761s
+user	0m33.814s
+sys	0m4.014s
+JQ EXIT 0

@@ -1,0 +1,14 @@
+startup floor (empty program), best/median of 5:
+ empty_cpp    0.0017 0.0017
+ empty_rs     0.0011 0.0011
+ empty_goose  0.0011 0.0011
+large:
+ ninja_harness full, teardown    0.8754 0.8810
+ ninja_harness full, NO_TEARDOWN 0.8324 0.8365
+ ninja -t query all              0.7139 0.7155
+ ninja -t commands all           0.7642 0.7650
+gen-large:
+ ninja_harness full, teardown    1.7235 1.7282
+ ninja_harness full, NO_TEARDOWN 1.6172 1.6189
+ ninja -t query all              1.4212 1.4277
+ ninja -t commands all           1.5544 1.5547

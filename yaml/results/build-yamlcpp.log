@@ -1,0 +1,47 @@
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: yaml-cpp/build
+ninja: Entering directory `build'
+[1/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
+[2/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilder.cpp.o
+[3/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilderadapter.cpp.o
+[4/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/depthguard.cpp.o
+[5/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/directives.cpp.o
+[6/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
+[7/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitfromevents.cpp.o
+[8/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/emit.cpp.o
+[9/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitter.cpp.o
+[10/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitterstate.cpp.o
+[11/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/exceptions.cpp.o
+[12/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/exp.cpp.o
+[13/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitterutils.cpp.o
+[14/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/memory.cpp.o
+[15/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/fptostring.cpp.o
+[16/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/node.cpp.o
+[17/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/nodebuilder.cpp.o
+[18/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/null.cpp.o
+[19/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/nodeevents.cpp.o
+[20/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/node_data.cpp.o
+[21/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/ostream_wrapper.cpp.o
+[22/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/parse.cpp.o
+[23/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/regex_yaml.cpp.o
+[24/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/parser.cpp.o
+[25/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/scanscalar.cpp.o
+[26/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/scantag.cpp.o
+[27/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/simplekey.cpp.o
+[28/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/scanner.cpp.o
+[29/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/stream.cpp.o
+[30/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/singledocparser.cpp.o
+[31/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/scantoken.cpp.o
+[32/33] Building CXX object CMakeFiles/yaml-cpp.dir/src/tag.cpp.o
+[33/33] Linking CXX static library libyaml-cpp.a
+
+real	0m9.382s
+user	0m16.605s
+sys	0m1.428s

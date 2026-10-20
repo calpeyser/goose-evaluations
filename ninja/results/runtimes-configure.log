@@ -1,0 +1,223 @@
+-- Performing standalone runtimes build.
+-- The C compiler identification is GNU 11.5.0
+-- The CXX compiler identification is GNU 11.5.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find LLVM (missing: LLVM_DIR)
+-- Could NOT find Clang (missing: Clang_DIR)
+-- Performing Test CXX_SUPPORTS_UNWINDLIB_EQ_NONE_FLAG
+-- Performing Test CXX_SUPPORTS_UNWINDLIB_EQ_NONE_FLAG - Failed
+-- Linker detection: GNU ld
+-- Performing Test LLVM_USES_LIBSTDCXX
+-- Performing Test LLVM_USES_LIBSTDCXX - Success
+-- Performing Test LLVM_DEFAULT_TO_GLIBCXX_USE_CXX11_ABI
+-- Performing Test LLVM_DEFAULT_TO_GLIBCXX_USE_CXX11_ABI - Success
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL - Success
+CMake Warning (policy) at llvm-project/llvm/cmake/modules/HandleLLVMOptions.cmake:960 (CHECK_C_SOURCE_COMPILES):
+  Policy CMP0219 is not set: Macro invocations preserve backslashes in
+  arguments.  Run "cmake --help-policy CMP0219" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  Command "CHECK_C_SOURCE_COMPILES" called with arguments containing
+  backslashes.
+
+  Since the policy is not set, backslashes in the arguments:
+
+   "// \\\n//\nint main(void) {return 0;}"
+
+  will be interpreted as escape sequences for compatibility.
+
+  Set the policy to NEW to instead pass
+
+   "// \\\\\\n//\\nint main(void) {return 0;}"
+
+  so that argument parsing will preserve the original values.
+Call Stack (most recent call first):
+  CMakeLists.txt:227 (include)
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP - Failed
+-- Performing Test C_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG
+-- Performing Test C_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG
+-- Performing Test CXX_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG - Success
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS - Failed
+Precompiled headers are disabled by default with GCC. Pass -DCMAKE_DISABLE_PRECOMPILE_HEADERS=OFF to override.
+-- Precompiled headers disabled.
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - not found
+-- Looking for flock
+-- Looking for flock - found
+-- Found Python3: ./.tools/bin/python3.9 (found version "3.9.25") found components: Interpreter
+-- LLVM host triple: aarch64-unknown-linux-gnu
+-- LLVM default target triple: aarch64-unknown-linux-gnu
+-- Doxygen disabled.
+-- Using libunwind testing configuration: llvm-project/libunwind/test/configs/llvm-libunwind-shared.cfg.in
+-- Looking for __mips_hard_float
+-- Looking for __mips_hard_float - not found
+-- Looking for _ABIO32
+-- Looking for _ABIO32 - not found
+-- Looking for fopen in c
+-- Looking for fopen in c - found
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - found
+-- Looking for __absvdi2 in gcc
+-- Looking for __absvdi2 in gcc - found
+-- Performing Test CXX_SUPPORTS_NOSTDINCXX_FLAG
+-- Performing Test CXX_SUPPORTS_NOSTDINCXX_FLAG - Success
+-- Looking for __arm__
+-- Looking for __arm__ - not found
+-- Looking for __USING_SJLJ_EXCEPTIONS__
+-- Looking for __USING_SJLJ_EXCEPTIONS__ - not found
+-- Looking for __ARM_DWARF_EH__
+-- Looking for __ARM_DWARF_EH__ - not found
+-- Looking for dladdr in dl
+-- Looking for dladdr in dl - found
+-- Looking for pthread_once in pthread
+-- Looking for pthread_once in pthread - found
+-- Performing Test CXX_SUPPORTS_WERROR_EQ_RETURN_TYPE_FLAG
+-- Performing Test CXX_SUPPORTS_WERROR_EQ_RETURN_TYPE_FLAG - Success
+-- Performing Test CXX_SUPPORTS_FSTRICT_ALIASING_FLAG
+-- Performing Test CXX_SUPPORTS_FSTRICT_ALIASING_FLAG - Success
+-- Performing Test CXX_SUPPORTS_EHSC_FLAG
+-- Performing Test CXX_SUPPORTS_EHSC_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_FUNWIND_TABLES_FLAG
+-- Performing Test CXX_SUPPORTS_FUNWIND_TABLES_FLAG - Success
+-- Performing Test CXX_SUPPORTS_FNO_EXCEPTIONS_FLAG
+-- Performing Test CXX_SUPPORTS_FNO_EXCEPTIONS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_FNO_RTTI_FLAG
+-- Performing Test CXX_SUPPORTS_FNO_RTTI_FLAG - Success
+-- Looking for getauxval
+-- Looking for getauxval - found
+-- Looking for elf_aux_info
+-- Looking for elf_aux_info - not found
+-- Performing Test CXX_SUPPORTS_WALL_FLAG
+-- Performing Test CXX_SUPPORTS_WALL_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WEXTRA_FLAG
+-- Performing Test CXX_SUPPORTS_WEXTRA_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNEWLINE_EOF_FLAG
+-- Performing Test CXX_SUPPORTS_WNEWLINE_EOF_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_WSHADOW_FLAG
+-- Performing Test CXX_SUPPORTS_WSHADOW_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WWRITE_STRINGS_FLAG
+-- Performing Test CXX_SUPPORTS_WWRITE_STRINGS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_UNUSED_PARAMETER_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_UNUSED_PARAMETER_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_LONG_LONG_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_LONG_LONG_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WEXTRA_SEMI_FLAG
+-- Performing Test CXX_SUPPORTS_WEXTRA_SEMI_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WUNDEF_FLAG
+-- Performing Test CXX_SUPPORTS_WUNDEF_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WUNUSED_TEMPLATE_FLAG
+-- Performing Test CXX_SUPPORTS_WUNUSED_TEMPLATE_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_WFORMAT_NONLITERAL_FLAG
+-- Performing Test CXX_SUPPORTS_WFORMAT_NONLITERAL_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WZERO_LENGTH_ARRAY_FLAG
+-- Performing Test CXX_SUPPORTS_WZERO_LENGTH_ARRAY_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_WDEPRECATED_REDUNDANT_CONSTEXPR_STATIC_DEF_FLAG
+-- Performing Test CXX_SUPPORTS_WDEPRECATED_REDUNDANT_CONSTEXPR_STATIC_DEF_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_WNO_NULLABILITY_COMPLETENESS_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_NULLABILITY_COMPLETENESS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WMISSING_PROTOTYPES_FLAG
+-- Performing Test CXX_SUPPORTS_WMISSING_PROTOTYPES_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_WSTRICT_ALIASING_EQ_2_FLAG
+-- Performing Test CXX_SUPPORTS_WSTRICT_ALIASING_EQ_2_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WSTRICT_OVERFLOW_EQ_4_FLAG
+-- Performing Test CXX_SUPPORTS_WSTRICT_OVERFLOW_EQ_4_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_ATTRIBUTES_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_ATTRIBUTES_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_LITERAL_SUFFIX_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_LITERAL_SUFFIX_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_CXX14_COMPAT_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_CXX14_COMPAT_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_NOEXCEPT_TYPE_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_NOEXCEPT_TYPE_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_SUGGEST_OVERRIDE_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_SUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_ALLOC_SIZE_LARGER_THAN_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_ALLOC_SIZE_LARGER_THAN_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_DEPRECATED_DECLARATIONS_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_DEPRECATED_DECLARATIONS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_DANGLING_REFERENCE_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_DANGLING_REFERENCE_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_STRICT_OVERFLOW_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_STRICT_OVERFLOW_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_MAYBE_UNINITIALIZED_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_MAYBE_UNINITIALIZED_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_STRICT_ALIASING_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_STRICT_ALIASING_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WNO_ERROR_FLAG
+-- Performing Test CXX_SUPPORTS_WNO_ERROR_FLAG - Success
+-- Performing Test CXX_SUPPORTS_PEDANTIC_FLAG
+-- Performing Test CXX_SUPPORTS_PEDANTIC_FLAG - Success
+-- Failed to locate sphinx-build executable (missing: SPHINX_EXECUTABLE) 
+-- Using libc++abi testing configuration: llvm-project/libcxxabi/test/configs/llvm-libc++abi-shared.cfg.in
+-- Looking for fopen in c
+-- Looking for fopen in c - found
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - found
+-- Looking for __aeabi_uldivmod in gcc
+-- Looking for __aeabi_uldivmod in gcc - not found
+-- Performing Test CXX_SUPPORTS_NOSTDLIBXX_FLAG
+-- Performing Test CXX_SUPPORTS_NOSTDLIBXX_FLAG - Failed
+-- Performing Test C_SUPPORTS_NODEFAULTLIBS_FLAG
+-- Performing Test C_SUPPORTS_NODEFAULTLIBS_FLAG - Success
+-- Looking for dladdr in dl
+-- Looking for dladdr in dl - found
+-- Looking for pthread_once in pthread
+-- Looking for pthread_once in pthread - found
+-- Looking for __cxa_thread_atexit_impl in c
+-- Looking for __cxa_thread_atexit_impl in c - found
+-- Performing Test C_SUPPORTS_FUNWIND_TABLES_FLAG
+-- Performing Test C_SUPPORTS_FUNWIND_TABLES_FLAG - Success
+-- Performing Test CXX_SUPPORTS_NODEFAULTLIBS_FLAG
+-- Performing Test CXX_SUPPORTS_NODEFAULTLIBS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_FSIZED_DEALLOCATION_FLAG
+-- Performing Test CXX_SUPPORTS_FSIZED_DEALLOCATION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_FVISIBILITY_EQ_HIDDEN_FLAG
+-- Performing Test CXX_SUPPORTS_FVISIBILITY_EQ_HIDDEN_FLAG - Success
+-- Using libc++ testing configuration: llvm-project/libcxx/test/configs/llvm-libc++-shared-gcc.cfg.in
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - found
+-- Performing Test CXX_SUPPORTS_NOSTDLIBINC_FLAG
+-- Performing Test CXX_SUPPORTS_NOSTDLIBINC_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_NOLIBC_FLAG
+-- Performing Test CXX_SUPPORTS_NOLIBC_FLAG - Success
+-- Looking for __PICOLIBC__
+-- Looking for __PICOLIBC__ - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - not found
+-- Looking for __atomic_fetch_add_8 in atomic
+-- Looking for __atomic_fetch_add_8 in atomic - not found
+-- Performing Test CXX_SUPPORTS_FDEBUG_PREFIX_MAP_EQ_RT_BUILD/INCLUDE/CXX/V1_EQ_LLVM_PROJECT/LIBCXX/INCLUDE_FLAG
+-- Performing Test CXX_SUPPORTS_FDEBUG_PREFIX_MAP_EQ_RT_BUILD/INCLUDE/CXX/V1_EQ_LLVM_PROJECT/LIBCXX/INCLUDE_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_FALIGNED_ALLOCATION_FLAG
+-- Performing Test CXX_SUPPORTS_FALIGNED_ALLOCATION_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test CXX_SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Failed
+-- Clang-tidy tests are disabled due to non-clang based compiler.
+-- ABI list file not generated for configuration aarch64-unknown-linux-gnu.libcxxabi.v1.stable.exceptions.nonew, `check-cxx-abilist` will not be available.
+-- Configuring done (5.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: rt-build

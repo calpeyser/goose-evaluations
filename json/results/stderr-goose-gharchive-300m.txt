@@ -1,0 +1,2 @@
+phase read 0.1127 parse 0.5139 walk 0.3837 emit 0.4037 hash 0.3580 free 0.0000
+pool_nodes 6481700 slow_floats 0

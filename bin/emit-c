@@ -1,0 +1,46 @@
+#!/bin/bash
+# Write the C that `goose -O2` emits for every Goose program in the four evaluations,
+# next to its .goose file, and list the commands in <eval>/goose/GENERATED.md.
+# With --check, write to a temporary folder and compare with the committed files.
+# The commands run inside each goose/ folder, so the file names in the C are relative.
+set -euo pipefail
+source "$(dirname "$0")/env.sh"
+CHECK=0; [ "${1:-}" = "--check" ] && CHECK=1
+PROGRAMS="ninja:ninja_load ninja:empty json:json json:json_fast json:json_view json:json_purefloat yaml:yaml jq:jqg jq:jqg_match"
+REL=../../.deps/goose/stdlib
+[ "$DEPS" = "$ROOT/.deps" ] || REL=$DEPS/goose/stdlib
+TMP=$(mktemp -d); bad=0
+for p in $PROGRAMS; do
+  e=${p%%:*}; n=${p#*:}; d=$ROOT/$e/goose
+  dest=$d/$n.c; [ $CHECK = 1 ] && dest=$TMP/$n.c
+  (cd "$d" && "$GOOSE" -O2 --stdlib "$REL" -o "$dest" "$n.goose" > "$TMP/$n.log" 2>&1) || { cat "$TMP/$n.log"; exit 1; }
+  if [ $CHECK = 1 ]; then
+    if cmp -s "$dest" "$d/$n.c"; then echo "same  $e/goose/$n.c"; else echo "DIFFERS $e/goose/$n.c"; bad=1; fi
+  else
+    echo "wrote $e/goose/$n.c ($(wc -c < "$dest") bytes): $(grep '^bce:' "$TMP/$n.log" || true)"
+  fi
+done
+if [ $CHECK = 0 ]; then
+  for e in ninja json yaml jq; do
+    {
+      echo "# Generated C"
+      echo
+      echo "Each \`.c\` file here is the C that goose writes for the \`.goose\` file of the same name."
+      echo "Goose is at commit \`${GOOSE_COMMIT:0:7}\` (github.com/aardappel/goose). The command, run in this folder:"
+      echo
+      echo '```bash'
+      for p in $PROGRAMS; do [ "${p%%:*}" = $e ] || continue; n=${p#*:}
+        echo "goose -O2 --stdlib ../../.deps/goose/stdlib -o $n.c $n.goose"; done
+      echo '```'
+      echo
+      echo "\`bin/emit-c\` runs these commands again, and \`bin/emit-c --check\` compares the result with these files."
+      echo "The C links with the Goose run-time. \`goose --emit-runtime runtime.c\` writes that run-time."
+      echo "The measured binaries come from \`goose build <file>.goose -O2 --cc gcc\`, which writes the same C and"
+      echo "compiles it and the run-time with \`gcc -O2\`."
+      [ $e = json ] && echo && echo "The JSON programs also link \`strtod_shim.c\` (named in each \`.build\` file): it calls the C library's \`strtod\` for long decimals and reads the clock."
+      [ $e = jq ] && echo && echo "\`repro/casefn_zero_size_variant.goose\` has no C: at this commit \`goose build\` stops on it with an internal error. That is the point of the file."
+      true
+    } > "$ROOT/$e/goose/GENERATED.md"
+  done
+fi
+rm -rf "$TMP"; exit $bad

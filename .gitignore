@@ -1,0 +1,5 @@
+# Made by bin/build-all, bin/fetch-inputs and bin/run-all; never committed.
+.deps/
+.inputs/
+.out/
+target/

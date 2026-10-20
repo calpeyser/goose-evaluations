@@ -1,0 +1,24 @@
+== ninja_harness
+2023772809,cycles:u
+5324173665,instructions:u
+30587852,l1d_cache_refill:u
+3991861,l2d_cache_refill:u
+0,ll_cache_miss_rd:u
+1329966,dtlb_walk:u
+66958,page-faults:u
+== n2_harness
+1766477746,cycles:u
+5905064483,instructions:u
+22264601,l1d_cache_refill:u
+2940305,l2d_cache_refill:u
+0,ll_cache_miss_rd:u
+1441232,dtlb_walk:u
+25683,page-faults:u
+== goose_load
+1386461807,cycles:u
+5338608948,instructions:u
+8277735,l1d_cache_refill:u
+1966106,l2d_cache_refill:u
+0,ll_cache_miss_rd:u
+238578,dtlb_walk:u
+43048,page-faults:u

@@ -1,0 +1,10 @@
+gh-reemit-s OK jq=0.030 jq-nodec=0.029 goose=0.011 goose-bulk=0.007
+gh-reemit-m OK jq=0.809 jq-nodec=0.804 goose=0.272 goose-bulk=0.173
+gh-reemit-l OK jq=8.076 jq-nodec=8.028 goose=2.696 goose-bulk=1.693
+gh-select-s OK jq=0.016 jq-nodec=0.016 goose=0.008 goose-bulk=0.004
+gh-select-m OK jq=0.408 jq-nodec=0.402 goose=0.187 goose-bulk=0.087
+gh-select-l OK jq=4.070 jq-nodec=4.037 goose=1.970 goose-bulk=0.831
+gh-strings-s OK jq=0.035 jq-nodec=0.035 goose=0.010 goose-bulk=0.006
+gh-strings-m OK jq=0.941 jq-nodec=0.930 goose=0.254 goose-bulk=0.140
+gh-strings-l OK jq=9.458 jq-nodec=9.339 goose=2.384 goose-bulk=1.370
+EXIT 0

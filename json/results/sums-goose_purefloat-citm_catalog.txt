@@ -1,0 +1,14 @@
+null 1263
+false 0
+true 0
+number 14392
+string 735
+array 10451
+object 10937
+nodes 37778
+strbytes 221379
+walk e394a8d9ecb8309f
+qhits 854
+qhash c424a8f9663e9719
+outlen 500299
+outhash 2db3d46bf7b3848c

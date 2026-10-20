@@ -1,0 +1,139 @@
+verify small yamlcpp_row MATCH
+verify small ryml_row MATCH
+verify small ryml_reserve_row MATCH
+verify small yaml_goose MATCH
+verify small c_twin MATCH
+verify medium yamlcpp_row MATCH
+verify medium ryml_row MATCH
+verify medium ryml_reserve_row MATCH
+verify medium yaml_goose MATCH
+verify medium c_twin MATCH
+verify large yamlcpp_row MATCH
+verify large ryml_row MATCH
+verify large ryml_reserve_row MATCH
+verify large yaml_goose MATCH
+verify large c_twin MATCH
+small yamlcpp_row 0 0.180s 30228 KB 317905287 1261991445
+small ryml_row 0 0.023s 15128 KB 27483759 79315603
+small ryml_reserve_row 0 0.021s 10468 KB 29027850 89997415
+small yaml_goose 0 0.014s 4488 KB 15276789 47719270
+small c_twin 0 0.014s 4116 KB 15207006 46762052
+small floor 0 0.007s 1376 KB 412428 461046
+small yamlcpp_row 1 0.138s 30228 KB 318295343 1261991468
+small ryml_row 1 0.023s 15132 KB 27393220 79315582
+small ryml_reserve_row 1 0.021s 10320 KB 29104649 89997391
+small yaml_goose 1 0.014s 4440 KB 15379766 47718620
+small c_twin 1 0.013s 4180 KB 15158034 46762048
+small floor 1 0.007s 1360 KB 419262 461046
+small yamlcpp_row 2 0.138s 30224 KB 317611021 1261991422
+small ryml_row 2 0.023s 15280 KB 27377961 79315521
+small ryml_reserve_row 2 0.021s 10320 KB 28814755 89997435
+small yaml_goose 2 0.014s 4476 KB 15369083 47718826
+small c_twin 2 0.013s 4116 KB 15200832 46762015
+small floor 2 0.007s 1420 KB 402198 461046
+small yamlcpp_row 3 0.139s 30172 KB 317971111 1261991533
+small ryml_row 3 0.024s 15276 KB 27228501 79315545
+small ryml_reserve_row 3 0.021s 10416 KB 29172885 89997415
+small yaml_goose 3 0.014s 4428 KB 15287062 47718848
+small c_twin 3 0.014s 4320 KB 15209739 46762011
+small floor 3 0.007s 1420 KB 424374 461046
+small yamlcpp_row 4 0.139s 30228 KB 319198180 1261991409
+small ryml_row 4 0.024s 15220 KB 27631173 79315498
+small ryml_reserve_row 4 0.021s 10324 KB 29167088 89997439
+small yaml_goose 4 0.014s 4500 KB 15413587 47718094
+small c_twin 4 0.014s 4116 KB 15264365 46762022
+small floor 4 0.007s 1416 KB 416209 461050
+small yamlcpp_row 5 0.138s 30228 KB 317380418 1261991473
+small ryml_row 5 0.024s 15280 KB 27389221 79315593
+small ryml_reserve_row 5 0.021s 10472 KB 28940360 89997374
+small yaml_goose 5 0.014s 4444 KB 15266658 47719020
+small c_twin 5 0.014s 4116 KB 15217414 46762015
+small floor 5 0.007s 1420 KB 417173 461054
+medium yamlcpp_row 0 2.607s 555524 KB 6306601435 24591716547
+medium ryml_row 0 0.302s 218676 KB 514482186 1496389935
+medium ryml_reserve_row 0 0.262s 150344 KB 545850700 1736183196
+medium yaml_goose 0 0.129s 57560 KB 271369372 900129086
+medium c_twin 0 0.130s 57236 KB 275674654 867693301
+medium floor 0 0.007s 1360 KB 420230 461082
+medium yamlcpp_row 1 2.606s 555580 KB 6303571064 24591716576
+medium ryml_row 1 0.300s 218672 KB 513697722 1496389838
+medium ryml_reserve_row 1 0.261s 150308 KB 546176338 1736183215
+medium yaml_goose 1 0.130s 57604 KB 271554535 900128806
+medium c_twin 1 0.130s 57296 KB 275591849 867693204
+medium floor 1 0.007s 1376 KB 420943 461082
+medium yamlcpp_row 2 2.604s 555584 KB 6297748300 24591716493
+medium ryml_row 2 0.303s 218528 KB 515611127 1496389892
+medium ryml_reserve_row 2 0.263s 150340 KB 546362155 1736183191
+medium yaml_goose 2 0.130s 57564 KB 271637081 900129472
+medium c_twin 2 0.131s 57236 KB 276223804 867693203
+medium floor 2 0.008s 1536 KB 448145 461082
+medium yamlcpp_row 3 2.622s 555580 KB 6335208689 24591716620
+medium ryml_row 3 0.301s 218676 KB 512864260 1496389910
+medium ryml_reserve_row 3 0.263s 150196 KB 547992509 1736183218
+medium yaml_goose 3 0.130s 57604 KB 271664806 900128759
+medium c_twin 3 0.130s 57296 KB 275369756 867693302
+medium floor 3 0.008s 1508 KB 435581 461082
+medium yamlcpp_row 4 2.680s 555516 KB 6302974591 24591716455
+medium ryml_row 4 0.297s 218672 KB 511286360 1496389868
+medium ryml_reserve_row 4 0.260s 150340 KB 546860292 1736183152
+medium yaml_goose 4 0.128s 57568 KB 271422694 900129680
+medium c_twin 4 0.129s 57236 KB 274804979 867693280
+medium floor 4 0.007s 1516 KB 427419 461082
+medium yamlcpp_row 5 2.597s 555584 KB 6290919164 24591716601
+medium ryml_row 5 0.301s 218676 KB 513898911 1496389902
+medium ryml_reserve_row 5 0.263s 150284 KB 546489283 1736183179
+medium yaml_goose 5 0.129s 57524 KB 271342923 900129281
+medium c_twin 5 0.131s 57300 KB 275753994 867693205
+medium floor 5 0.008s 1376 KB 428851 461082
+large yamlcpp_row 0 20.682s 4328444 KB 50243493726 196655716882
+large ryml_row 0 2.392s 1634536 KB 4126523707 11952500701
+large ryml_reserve_row 0 2.053s 1178968 KB 4353737002 13870930629
+large yaml_goose 0 0.980s 449640 KB 2171088411 7198226680
+large c_twin 0 0.994s 449172 KB 2207472457 6939613894
+large floor 0 0.008s 1516 KB 435793 461050
+large yamlcpp_row 1 20.848s 4328388 KB 50582350457 196655717011
+large ryml_row 1 2.384s 1634392 KB 4144957057 11952500759
+large ryml_reserve_row 1 2.054s 1178932 KB 4360230850 13870930681
+large yaml_goose 1 0.990s 449540 KB 2171391676 7198227190
+large c_twin 1 0.991s 449172 KB 2193485269 6939613864
+large floor 1 0.008s 1420 KB 430839 461046
+large yamlcpp_row 2 20.836s 4328480 KB 50624396668 196655717047
+large ryml_row 2 2.393s 1634284 KB 4148170268 11952500646
+large ryml_reserve_row 2 2.051s 1179120 KB 4355501697 13870930618
+large yaml_goose 2 0.967s 449504 KB 2170619579 7198227270
+large c_twin 2 0.979s 449172 KB 2197385139 6939613792
+large floor 2 0.007s 1416 KB 428000 461046
+large yamlcpp_row 3 20.803s 4328480 KB 50576236432 196655716986
+large ryml_row 3 2.382s 1634484 KB 4134133487 11952500653
+large ryml_reserve_row 3 2.052s 1179120 KB 4351706890 13870930673
+large yaml_goose 3 0.975s 449640 KB 2169965044 7198226391
+large c_twin 3 0.991s 449248 KB 2208469531 6939613845
+large floor 3 0.008s 1532 KB 429461 461062
+large yamlcpp_row 4 20.708s 4328476 KB 50289434522 196655716953
+large ryml_row 4 2.392s 1634396 KB 4168397925 11952500658
+large ryml_reserve_row 4 2.056s 1178968 KB 4359894017 13870930674
+large yaml_goose 4 1.007s 449332 KB 2171814072 7198227104
+large c_twin 4 0.998s 449232 KB 2202499119 6939613763
+large floor 4 0.007s 1420 KB 423539 461046
+large yamlcpp_row 5 20.682s 4328412 KB 50271036783 196655716923
+large ryml_row 5 2.381s 1634484 KB 4134605515 11952500685
+large ryml_reserve_row 5 2.054s 1178972 KB 4364532637 13870930577
+large yaml_goose 5 0.994s 449496 KB 2170304081 7198227510
+large c_twin 5 0.997s 449232 KB 2210441564 6939613894
+large floor 5 0.007s 1360 KB 418175 461050
+small yamlcpp_row phases_ms read 0.4 parse 111.3 walk_emit 6.5 teardown 5.1 hash 5.8
+small ryml_row phases_ms read 0.4 parse 10.9 walk_emit 2.6 teardown 0.4 hash 1.0
+small ryml_reserve_row phases_ms read 0.3 parse 8.3 walk_emit 2.6 teardown 0.3 hash 1.0
+small yaml_goose phases_ms read 0.3 parse 3.5 walk_emit 1.5 teardown 0.0 hash 1.0
+small c_twin phases_ms read 0.3 parse 3.2 walk_emit 1.9 teardown 0.0 hash 1.0
+medium yamlcpp_row phases_ms read 7.0 parse 2159.0 walk_emit 144.2 teardown 240.5 hash 18.8
+medium ryml_row phases_ms read 7.1 parse 207.9 walk_emit 48.4 teardown 7.6 hash 18.4
+medium ryml_reserve_row phases_ms read 7.0 parse 171.9 walk_emit 49.9 teardown 5.0 hash 18.4
+medium yaml_goose phases_ms read 7.4 parse 63.9 walk_emit 27.9 teardown 0.0 hash 18.8
+medium c_twin phases_ms read 6.0 parse 60.0 walk_emit 35.1 teardown 0.0 hash 18.8
+large yamlcpp_row phases_ms read 55.5 parse 17358.3 walk_emit 1065.6 teardown 1932.6 hash 147.6
+large ryml_row phases_ms read 55.5 parse 1689.9 walk_emit 395.0 teardown 70.7 hash 147.6
+large ryml_reserve_row phases_ms read 54.9 parse 1388.0 walk_emit 400.9 teardown 47.8 hash 147.6
+large yaml_goose phases_ms read 56.2 parse 508.6 walk_emit 225.0 teardown 0.0 hash 150.4
+large c_twin phases_ms read 48.0 parse 475.0 walk_emit 280.2 teardown 0.0 hash 150.1
+RUN_ALL_DONE

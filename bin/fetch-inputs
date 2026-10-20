@@ -1,0 +1,38 @@
+#!/bin/bash
+# Download or generate the inputs into $INPUTS, then print each file's sha256 and
+# compare it with <eval>/inputs/sha256.txt (the files the committed results used).
+# Usage: bin/fetch-inputs [--size small|medium|large|all] [ninja json yaml jq]
+#   small   about 1 MB per input: a few minutes, one 136 MB download (GH Archive)
+#   medium  about 25 MB per input
+#   large   about 150-300 MB per input: needs about 5 GB of disk
+# Each size includes the smaller ones' downloads but not their files.
+set -euo pipefail
+source "$(dirname "$0")/env.sh"
+SIZE=small
+if [ "${1:-}" = "--size" ]; then SIZE=$2; shift 2; fi
+EVALS=${*:-ninja json yaml jq}
+mkdir -p "$INPUTS/dl"
+
+# One hour of public GitHub events, used by the json and jq evaluations.
+GH=$INPUTS/dl/2024-01-15-15.json.gz
+if [[ " $EVALS " == *" json "* || " $EVALS " == *" jq "* ]] && [ ! -f "$GH" ]; then
+  log "downloading GH Archive 2024-01-15 15:00 (136 MB)"
+  curl -fsSL -o "$GH.part" https://data.gharchive.org/2024-01-15-15.json.gz && mv "$GH.part" "$GH"
+fi
+[ -f "$GH" ] && echo "5fb7b0cacd66b97749e3bb7231130a15d4da5c8ade9c7d08aaf6316772e18049  $GH" | sha256sum -c --quiet -
+
+sizes=$SIZE; [ "$SIZE" = all ] && sizes="small medium large"
+status=0
+for e in $EVALS; do
+  for s in $sizes; do
+    log "$e: $s inputs"
+    "$ROOT/$e/inputs/fetch.sh" "$s"
+  done
+  # Compare what exists with the recorded sums.
+  (cd "$INPUTS/$e" && while read -r sum file; do
+    [ -f "$file" ] || continue
+    got=$(sha256sum "$file" | cut -d' ' -f1)
+    if [ "$got" = "$sum" ]; then echo "  ok      $got  $e/$file"; else echo "  DIFFERS $got  $e/$file (recorded $sum)"; exit 1; fi
+  done < "$ROOT/$e/inputs/sha256.txt") || status=1
+done
+exit $status

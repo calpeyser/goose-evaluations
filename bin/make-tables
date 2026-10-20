@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+"""Fold the results of a run (in $OUT) into one summary, $OUT/tables.md, and print it.
+
+For each evaluation it checks two things and says so in the table:
+  - the rows agree with each other (the same checksum lines on every input), and
+  - each checksum equals the one in the committed results (<eval>/results/).
+Then it gives the median times of the Goose row and the two baselines on every input.
+Usage: bin/make-tables [ninja json yaml jq]   (exit status 1 if a check fails)"""
+import csv, json, os, statistics, subprocess, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.environ.get("OUT", os.path.join(ROOT, ".out"))
+evals = sys.argv[1:] or ["ninja", "json", "yaml", "jq"]
+lines, ok = [], True
+
+
+def ms(s):
+    return f"{s * 1000:.1f} ms" if s < 1 else f"{s:.3f} s"
+
+
+def ninja():
+    global ok
+    lines.append("## ninja: load a build graph (Ninja, n2, Goose)\n")
+    lines.append("| mode | input | Ninja | n2 | Goose | Goose vs Ninja | Goose vs n2 | rows agree | same as committed |")
+    lines.append("|---|---|---:|---:|---:|---:|---:|---|---|")
+    for mode in ("full", "load"):
+        p = f"{OUT}/ninja/results/bench-{mode}.json"
+        if not os.path.exists(p):
+            continue
+        new, old = json.load(open(p)), json.load(open(f"{ROOT}/ninja/results/bench-{mode}.json"))
+        for inp, r in new.items():
+            m = {k: v["median"] for k, v in r["rows"].items()}
+            same = old.get(inp, {}).get("checksum") == r["checksum"]
+            note = "yes" if same else ("not recorded" if inp not in old else "NO")
+            if inp in old and not same and not inp.startswith("gen-"):
+                note = "no (real files hold local paths)"
+            elif not same and inp in old:
+                ok = False
+            lines.append(f"| {mode} | {inp} | {ms(m['ninja_harness'])} | {ms(m['n2_harness'])} | {ms(m['goose_load'])} | "
+                         f"{m['ninja_harness'] / m['goose_load']:.2f}x | {m['n2_harness'] / m['goose_load']:.2f}x | yes | {note} |")
+    lines.append("\nThe harness stops if a row's output differs from the first row's, so every line here agrees.\n")
+
+
+def json_():
+    global ok
+    d = f"{OUT}/json/results"
+    tsvs = sorted(f for f in os.listdir(d) if f.startswith("bench-") and f.endswith(".tsv")) if os.path.isdir(d) else []
+    if not tsvs:
+        return
+    rows = {}
+    for r in csv.DictReader(open(f"{d}/{tsvs[-1]}"), delimiter="\t"):
+        rows.setdefault((r["file"], r["row"]), []).append(float(r["wall_s"]))
+    lines.append("## json: a JSON tree (cJSON, yyjson, Goose)\n")
+    lines.append("| input | cJSON | yyjson | Goose | Goose vs yyjson | Goose vs cJSON | rows agree | same as committed |")
+    lines.append("|---|---:|---:|---:|---:|---:|---|---|")
+    for f in dict.fromkeys(k[0] for k in rows):
+        m = {r: statistics.median(rows[(f, r)]) for r in ("cjson", "yyjson", "goose")}
+        sums = {r: [l for l in open(f"{d}/sums-{r}-{f}.txt") if not l.startswith("out")] for r in ("cjson", "yyjson", "goose")}
+        agree = sums["cjson"] == sums["yyjson"] == sums["goose"]
+        same = all(open(f"{d}/sums-{r}-{f}.txt").read() == open(f"{ROOT}/json/results/sums-{r}-{f}.txt").read()
+                   for r in ("cjson", "yyjson", "goose"))
+        ok = ok and agree and same
+        lines.append(f"| {f} | {ms(m['cjson'])} | {ms(m['yyjson'])} | {ms(m['goose'])} | {m['goose'] / m['yyjson']:.2f}x | "
+                     f"{m['goose'] / m['cjson']:.2f}x | {'yes' if agree else 'NO'} | {'yes' if same else 'NO'} |")
+    lines.append("\nA ratio above 1 means Goose takes longer. \"Rows agree\" leaves out the output text, which cJSON prints differently.\n")
+
+
+def yaml_():
+    global ok
+    d = f"{OUT}/yaml/results"
+    if not os.path.isdir(d):
+        return
+    verify = open(f"{d}/verify.txt").read() if os.path.exists(f"{d}/verify.txt") else ""
+    lines.append("## yaml: a YAML tree (yaml-cpp, rapidyaml, Goose)\n")
+    lines.append("| inputs | size | yaml-cpp | rapidyaml | Goose | C twin | rapidyaml vs Goose | yaml-cpp vs Goose | output = PyYAML | same as committed |")
+    lines.append("|---|---|---:|---:|---:|---:|---:|---:|---|---|")
+    for s, committed in (("real", "bench.csv"), ("gen", "bench-gen.csv")):
+        p = f"{d}/bench-{s}.csv"
+        if not os.path.exists(p):
+            continue
+        rows, sums = {}, {}
+        for r in csv.DictReader(open(p)):
+            if r["rep"] != "0":
+                rows.setdefault((r["size"], r["row"]), []).append(float(r["wall_s"]))
+            if r["row"] != "floor":
+                sums[r["size"]] = r["checksum"]
+        old = {r["size"]: r["checksum"] for r in csv.DictReader(open(f"{ROOT}/yaml/results/{committed}")) if r["row"] != "floor"}
+        for size in dict.fromkeys(k[0] for k in rows):
+            m = {r: statistics.median(rows[(size, r)]) for r in ("yamlcpp_row", "ryml_row", "yaml_goose", "c_twin")}
+            match = all(f"verify {s} {size} {r} MATCH" in verify for r in ("yamlcpp_row", "ryml_row", "yaml_goose", "c_twin"))
+            same = old.get(size) == sums.get(size)
+            ok = ok and match and same
+            lines.append(f"| {s} | {size} | {ms(m['yamlcpp_row'])} | {ms(m['ryml_row'])} | {ms(m['yaml_goose'])} | {ms(m['c_twin'])} | "
+                         f"{m['ryml_row'] / m['yaml_goose']:.2f}x | {m['yamlcpp_row'] / m['yaml_goose']:.1f}x | "
+                         f"{'yes' if match else 'NO'} | {'yes' if same else 'NO'} |")
+    lines.append("\nEvery row writes the tree as text; \"output = PyYAML\" means that text is byte for byte PyYAML's.\n")
+
+
+def jq():
+    global ok
+    p = f"{OUT}/jq/results/bench.json"
+    if not os.path.exists(p):
+        return
+    new, old = json.load(open(p)), json.load(open(f"{ROOT}/jq/results/bench.json"))
+    lines.append("## jq: a jq core (jq, jaq, Goose)\n")
+    lines.append("| case | jq | jaq | Goose | jq vs Goose | jaq vs Goose | rows agree | same as committed |")
+    lines.append("|---|---:|---:|---:|---:|---:|---|---|")
+    for name, c in new.items():
+        m = {r: statistics.median(c["rows"][r]["wall"]) for r in ("jq", "jaq", "goose")}
+        same = old.get(name, {}).get("checksum") == c["checksum"]
+        ok = ok and c["ok"] and same
+        lines.append(f"| {name} | {ms(m['jq'])} | {ms(m['jaq'])} | {ms(m['goose'])} | {m['jq'] / m['goose']:.2f}x | "
+                     f"{m['jaq'] / m['goose']:.2f}x | {'yes' if c['ok'] else 'NO'} | {'yes' if same else 'NO'} |")
+    lines.append("")
+
+
+for e in evals:
+    {"ninja": ninja, "json": json_, "yaml": yaml_, "jq": jq}[e]()
+head = subprocess.run(["git", "-C", ROOT, "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
+text = f"# Results of this run\n\nRepository at `{head or 'unknown'}`. Made by `bin/make-tables` from `{os.path.relpath(OUT, ROOT)}/`.\n" \
+       f"Medians of 5 timed runs. All checks passed: {'yes' if ok else 'NO'}.\n\n" + "\n".join(lines) + "\n"
+open(f"{OUT}/tables.md", "w").write(text)
+print(text)
+sys.exit(0 if ok else 1)

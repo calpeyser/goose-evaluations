@@ -1,0 +1,14 @@
+null 0
+false 0
+true 0
+number 111126
+string 4
+array 56045
+object 4
+nodes 167179
+strbytes 90
+walk bb822274ea9267b5
+qhits 4
+qhash f52d90e830deaa39
+outlen 1943503
+outhash 50596830acd9720f

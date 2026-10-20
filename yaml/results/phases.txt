@@ -1,0 +1,15 @@
+small yamlcpp_row phases_ms read 0.4 parse 111.3 walk_emit 6.5 teardown 5.1 hash 5.8
+small ryml_row phases_ms read 0.4 parse 10.9 walk_emit 2.6 teardown 0.4 hash 1.0
+small ryml_reserve_row phases_ms read 0.3 parse 8.3 walk_emit 2.6 teardown 0.3 hash 1.0
+small yaml_goose phases_ms read 0.3 parse 3.5 walk_emit 1.5 teardown 0.0 hash 1.0
+small c_twin phases_ms read 0.3 parse 3.2 walk_emit 1.9 teardown 0.0 hash 1.0
+medium yamlcpp_row phases_ms read 7.0 parse 2159.0 walk_emit 144.2 teardown 240.5 hash 18.8
+medium ryml_row phases_ms read 7.1 parse 207.9 walk_emit 48.4 teardown 7.6 hash 18.4
+medium ryml_reserve_row phases_ms read 7.0 parse 171.9 walk_emit 49.9 teardown 5.0 hash 18.4
+medium yaml_goose phases_ms read 7.4 parse 63.9 walk_emit 27.9 teardown 0.0 hash 18.8
+medium c_twin phases_ms read 6.0 parse 60.0 walk_emit 35.1 teardown 0.0 hash 18.8
+large yamlcpp_row phases_ms read 55.5 parse 17358.3 walk_emit 1065.6 teardown 1932.6 hash 147.6
+large ryml_row phases_ms read 55.5 parse 1689.9 walk_emit 395.0 teardown 70.7 hash 147.6
+large ryml_reserve_row phases_ms read 54.9 parse 1388.0 walk_emit 400.9 teardown 47.8 hash 147.6
+large yaml_goose phases_ms read 56.2 parse 508.6 walk_emit 225.0 teardown 0.0 hash 150.4
+large c_twin phases_ms read 48.0 parse 475.0 walk_emit 280.2 teardown 0.0 hash 150.1

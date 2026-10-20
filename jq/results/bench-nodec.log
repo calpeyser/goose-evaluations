@@ -1,0 +1,10 @@
+gh-reemit-s OK jq=0.030 jq-nodec=0.030 goose=0.011
+gh-reemit-m OK jq=0.809 jq-nodec=0.802 goose=0.280
+gh-reemit-l OK jq=8.075 jq-nodec=8.057 goose=2.757
+gh-select-s OK jq=0.017 jq-nodec=0.017 goose=0.008
+gh-select-m OK jq=0.407 jq-nodec=0.404 goose=0.196
+gh-select-l OK jq=4.078 jq-nodec=4.029 goose=1.926
+gh-strings-s OK jq=0.034 jq-nodec=0.035 goose=0.010
+gh-strings-m OK jq=0.941 jq-nodec=0.933 goose=0.239
+gh-strings-l OK jq=9.456 jq-nodec=9.336 goose=2.343
+EXIT 0

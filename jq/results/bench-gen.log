@@ -1,0 +1,9 @@
+gen-reemit-s OK jq=0.029 jaq=0.019 goose=0.010 jq-cli=0.045 jaq-cli=0.018
+gen-reemit-m OK jq=0.830 jaq=0.522 goose=0.275 jq-cli=1.319 jaq-cli=0.489
+gen-reemit-l OK jq=8.208 jaq=5.201 goose=2.836 jq-cli=13.086 jaq-cli=4.863
+gen-select-s OK jq=0.016 jaq=0.015 goose=0.008 jq-cli=0.018 jaq-cli=0.015
+gen-select-m OK jq=0.422 jaq=0.387 goose=0.192 jq-cli=0.474 jaq-cli=0.389
+gen-select-l OK jq=4.152 jaq=3.818 goose=1.994 jq-cli=4.550 jaq-cli=3.843
+gen-strings-s OK jq=0.036 jaq=0.052 goose=0.010 jq-cli=0.047 jaq-cli=0.054
+gen-strings-m OK jq=1.015 jaq=1.542 goose=0.245 jq-cli=1.227 jaq-cli=1.577
+gen-strings-l OK jq=10.124 jaq=15.362 goose=2.538 jq-cli=11.256 jaq-cli=15.750

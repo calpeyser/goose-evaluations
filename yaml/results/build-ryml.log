@@ -1,0 +1,37 @@
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- ryml: using C++ standard: C++11
+-- ryml: setting C++ standard: 11
+-- ryml: setting C++ standard required: ON
+-- ryml: packing the project: 
+-- ryml: cpack tag: v0.16.0-17-gc42152f2-master
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: rapidyaml/build
+ninja: Entering directory `build'
+[1/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/common.cpp.o
+[2/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/node_type.cpp.o
+[3/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/emit_file.cpp.o
+[4/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/emit_buf.cpp.o
+[5/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/reference_resolver.cpp.o
+[6/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/scalar_style.cpp.o
+[7/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/tag.cpp.o
+[8/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/version.cpp.o
+[9/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/base64.cpp.o
+[10/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/error.cpp.o
+[11/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/tree.cpp.o
+[12/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/language.cpp.o
+[13/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/memory_util.cpp.o
+[14/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/format.cpp.o
+[15/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/version.cpp.o
+[16/18] Building CXX object CMakeFiles/ryml.dir/ext/c4core.src/c4/utf.cpp.o
+[17/18] Building CXX object CMakeFiles/ryml.dir/src/c4/yml/parse.cpp.o
+[18/18] Linking CXX static library libryml.a
+
+real	0m7.263s
+user	0m12.602s
+sys	0m0.773s

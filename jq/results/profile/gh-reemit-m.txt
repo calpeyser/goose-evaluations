@@ -1,0 +1,45 @@
+== gh-reemit-m harness_jq
+    24.17%  [.] jv_parser_next                 -      -            
+    14.96%  [.] jvp_utf8_next                  -      -            
+     9.63%  [.] jvp_utf8_is_valid              -      -            
+     8.70%  [.] jvp_string_append              -      -            
+     7.98%  [.] jvp_dump_string.isra.0         -      -            
+     5.49%  [.] jv_string_append_buf           -      -            
+     4.71%  [.] main                           -      -            
+     3.28%  [.] __GI___memcpy_sve              -      -            
+     2.86%  [.] tokenadd                       -      -            
+     2.45%  [.] _int_malloc                    -      -            
+     2.03%  [.] jv_free                        -      -            
+     1.60%  [.] jvp_string_hash.isra.0         -      -            
+
+
+== gh-reemit-m harness_jaq
+    21.76%  [.] <hifijson::IterLexer<core::io::error::Error, alloc::io::util::Bytes<std::io::stdio::StdinLock>> as hifijson::write::Write>::write_until::<hifijson::str::LexWrite::str_fold::string_end>  -      -            
+    10.25%  [.] jaq_json::write::write                                                                                                                                                                    -      -            
+     8.26%  [.] harness_jaq::main                                                                                                                                                                         -      -            
+     7.43%  [.] <core::io::write::default_write_fmt::Adapter<alloc::vec::Vec<u8>> as core::fmt::Write>::write_str                                                                                         -      -            
+     6.66%  [.] jaq_json::read::parse::<hifijson::IterLexer<core::io::error::Error, alloc::io::util::Bytes<std::io::stdio::StdinLock>>>                                                                   -      -            
+     3.38%  [.] core::fmt::write                                                                                                                                                                          -      -            
+     2.89%  [.] <hifijson::IterLexer<core::io::error::Error, alloc::io::util::Bytes<std::io::stdio::StdinLock>> as hifijson::read::Read>::peek_next                                                       -      -            
+     2.77%  [.] mi_free                                                                                                                                                                                   -      -            
+     2.59%  [.] jaq_json::read::parse_string::<hifijson::IterLexer<core::io::error::Error, alloc::io::util::Bytes<std::io::stdio::StdinLock>>>                                                            -      -            
+     2.42%  [.] <indexmap::map::IndexMap<jaq_json::Val, jaq_json::Val, foldhash::fast::RandomState>>::insert_full                                                                                         -      -            
+     2.13%  [.] <hashbrown::raw::RawTable<usize>>::reserve_rehash::<indexmap::inner::get_hash<jaq_json::Val, jaq_json::Val>::{closure#0}>                                                                 -      -            
+     2.09%  [.] mi_theap_malloc_aligned                                                                                                                                                                   -      -            
+     1.98%  [.] _mi_page_malloc_zero                                                                                                                                                                      -      -            
+     1.97%  [.] <hifijson::IterLexer<core::io::error::Error, alloc::io::util::Bytes<std::io::stdio::StdinLock>> as hifijson::read::Read>::take_next                                                       -      -            
+     1.89%  [.] __GI___memcpy_sve                                                                                                                                                                         -      -            
+== gh-reemit-m jqg
+    19.77%  [.] gs_os_read_line            -      -            
+    19.67%  [.] _IO_getc                   -      -            
+    13.96%  [.] emit_str_g                 -      -            
+    13.76%  [.] main                       -      -            
+    13.71%  [.] scan_string_g.constprop.0  -      -            
+     5.80%  [.] parse_value_g.constprop.0  -      -            
+     3.80%  [.] emit_g.constprop.0         -      -            
+     3.39%  [.] new_obj_g.constprop.0      -      -            
+     1.73%  [.] gs_memcpy                  -      -            
+     1.67%  [.] ws_g                       -      -            
+     1.63%  [.] fgetc@plt                  -      -            
+
+

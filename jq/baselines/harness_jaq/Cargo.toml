@@ -1,0 +1,15 @@
+[package]
+name = "harness_jaq"
+version = "0.1.0"
+edition = "2021"
+
+# The jaq row: jaq's own library crates (jaq @ 6b8cbeb, fetched by build.sh) behind the same
+# harness as the Goose row, with mimalloc as the jaq command uses by default.
+[dependencies]
+jaq-all = { path = "../../../.deps/jaq/jaq-all", features = ["formats", "std-all"] }
+mimalloc = { version = "0.1.29", default-features = false }
+
+[profile.release]
+codegen-units = 1
+
+[workspace]

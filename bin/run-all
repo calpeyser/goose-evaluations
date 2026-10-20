@@ -1,0 +1,17 @@
+#!/bin/bash
+# Run the four evaluations on the inputs of one size, then make the tables.
+# Usage: bin/run-all [--size small|medium|large|all] [ninja json yaml jq]
+# Run it on an idle machine: the rows are timed one at a time, and other load shows in the times.
+# Results go to $OUT/<eval>/results/; the summary to $OUT/tables.md.
+set -euo pipefail
+source "$(dirname "$0")/env.sh"
+SIZE=small
+if [ "${1:-}" = "--size" ]; then SIZE=$2; shift 2; fi
+EVALS=${*:-ninja json yaml jq}
+status=0
+for e in $EVALS; do
+  log "$e: running ($SIZE)"
+  "$ROOT/$e/scripts/run.sh" "$SIZE" > "$OUT/run-$e.log" 2>&1 || { echo "$e: FAILED, see $OUT/run-$e.log"; status=1; }
+done
+"$ROOT/bin/make-tables" $EVALS || status=1
+exit $status

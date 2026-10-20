@@ -1,0 +1,312 @@
+-- The C compiler identification is GNU 11.5.0
+-- The CXX compiler identification is GNU 11.5.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- bolt project is disabled
+-- clang project is enabled
+-- clang-tools-extra project is enabled
+-- cross-project-tests project is disabled
+-- lld project is enabled
+-- lldb project is disabled
+-- mlir project is enabled
+-- polly project is disabled
+-- flang project is disabled
+-- libc project is disabled
+-- compiler-rt project is disabled
+-- Doxygen disabled.
+-- Found Python3: ./.tools/bin/python3.9 (found suitable version "3.9.25", minimum required is "3.8") found components: Interpreter
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - found
+-- Performing Test HAVE_BUILTIN_THREAD_POINTER
+-- Performing Test HAVE_BUILTIN_THREAD_POINTER - Success
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for pthread_rwlock_init in pthread
+-- Looking for pthread_rwlock_init in pthread - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - found
+-- Looking for pfm_initialize in pfm
+-- Looking for pfm_initialize in pfm - not found
+-- Could NOT find ZLIB (missing: ZLIB_LIBRARY ZLIB_INCLUDE_DIR) 
+-- Could NOT find LibLZMA (missing: LIBLZMA_LIBRARY LIBLZMA_INCLUDE_DIR LIBLZMA_HAS_AUTO_DECODER LIBLZMA_HAS_EASY_ENCODER LIBLZMA_HAS_LZMA_PRESET) 
+-- Could NOT find LibXml2 (missing: LIBXML2_LIBRARY LIBXML2_INCLUDE_DIR) (found version "")
+-- Could NOT find LibEdit (missing: LibEdit_INCLUDE_DIRS LibEdit_LIBRARIES) 
+-- Looking for arc4random
+-- Looking for arc4random - not found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /usr/include
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed
+-- Looking for __register_frame
+-- Looking for __register_frame - found
+-- Looking for __deregister_frame
+-- Looking for __deregister_frame - found
+-- Looking for __unw_add_dynamic_fde
+-- Looking for __unw_add_dynamic_fde - not found
+-- Looking for _Unwind_Backtrace
+-- Looking for _Unwind_Backtrace - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for sysconf
+-- Looking for sysconf - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for isatty
+-- Looking for isatty - found
+-- Looking for futimens
+-- Looking for futimens - found
+-- Looking for futimes
+-- Looking for futimes - found
+-- Looking for getauxval
+-- Looking for getauxval - found
+-- Looking for sigaltstack
+-- Looking for sigaltstack - found
+-- Looking for mallctl
+-- Looking for mallctl - not found
+-- Looking for mallinfo
+-- Looking for mallinfo - found
+-- Looking for mallinfo2
+-- Looking for mallinfo2 - found
+-- Looking for malloc_zone_statistics
+-- Looking for malloc_zone_statistics - not found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - found
+-- Looking for pread
+-- Looking for pread - found
+-- Looking for sbrk
+-- Looking for sbrk - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strerror_s
+-- Looking for strerror_s - not found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC - Success
+-- Looking for pthread_getname_np
+-- Looking for pthread_getname_np - found
+-- Looking for pthread_setname_np
+-- Looking for pthread_setname_np - found
+-- Looking for pthread_get_name_np
+-- Looking for pthread_get_name_np - not found
+-- Looking for pthread_set_name_np
+-- Looking for pthread_set_name_np - not found
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Looking for proc_pid_rusage
+-- Looking for proc_pid_rusage - not found
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- Performing Test LLVM_HAS_ATOMICS
+-- Performing Test LLVM_HAS_ATOMICS - Success
+-- LLVM host triple: aarch64-unknown-linux-gnu
+-- Native target architecture is AArch64
+-- Threads enabled.
+-- Ninja version: 1.13.2.git.kitware.jobserver-pipe-1
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- Found Python module pygments
+-- Found Python module pygments.lexers.c_cpp
+-- Found Python module yaml
+-- LLVM default target triple: aarch64-unknown-linux-gnu
+-- Performing Test LLVM_USES_LIBSTDCXX
+-- Performing Test LLVM_USES_LIBSTDCXX - Success
+-- Performing Test LLVM_DEFAULT_TO_GLIBCXX_USE_CXX11_ABI
+-- Performing Test LLVM_DEFAULT_TO_GLIBCXX_USE_CXX11_ABI - Success
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Success
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Success
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test C_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG
+-- Performing Test C_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG
+-- Performing Test CXX_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL - Success
+CMake Warning (policy) at cmake/modules/HandleLLVMOptions.cmake:960 (CHECK_C_SOURCE_COMPILES):
+  Policy CMP0219 is not set: Macro invocations preserve backslashes in
+  arguments.  Run "cmake --help-policy CMP0219" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  Command "CHECK_C_SOURCE_COMPILES" called with arguments containing
+  backslashes.
+
+  Since the policy is not set, backslashes in the arguments:
+
+   "// \\\n//\nint main(void) {return 0;}"
+
+  will be interpreted as escape sequences for compatibility.
+
+  Set the policy to NEW to instead pass
+
+   "// \\\\\\n//\\nint main(void) {return 0;}"
+
+  so that argument parsing will preserve the original values.
+Call Stack (most recent call first):
+  CMakeLists.txt:1144 (include)
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP - Failed
+-- Performing Test C_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG
+-- Performing Test C_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG
+-- Performing Test CXX_SUPPORTS_CTAD_MAYBE_UNSUPPORTED_FLAG - Success
+-- Performing Test GLIBC_2_36_OR_NEWER
+-- Performing Test GLIBC_2_36_OR_NEWER - Failed
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS - Failed
+Precompiled headers are disabled by default with GCC. Pass -DCMAKE_DISABLE_PRECOMPILE_HEADERS=OFF to override.
+-- Precompiled headers disabled.
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - not found
+-- Looking for flock
+-- Looking for flock - found
+-- Linker detection: GNU ld
+-- Performing Test LLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS
+-- Performing Test LLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS - Success
+-- Performing Test HAS_WERROR_GLOBAL_CTORS
+-- Performing Test HAS_WERROR_GLOBAL_CTORS - Failed
+-- Looking for __x86_64__
+-- Looking for __x86_64__ - not found
+-- Found Git: /usr/bin/git (found version "2.50.1")
+-- Looking for logf128
+-- Looking for logf128 - found
+-- Targeting AArch64
+-- Targeting AMDGPU
+-- Targeting ARM
+-- Targeting AVR
+-- Targeting BPF
+-- Targeting DirectX
+-- Targeting Hexagon
+-- Targeting Lanai
+-- Targeting LoongArch
+-- Targeting Mips
+-- Targeting MSP430
+-- Targeting NVPTX
+-- Targeting PowerPC
+-- Targeting RISCV
+-- Targeting Sparc
+-- Targeting SPIRV
+-- Targeting SystemZ
+-- Targeting VE
+-- Targeting WebAssembly
+-- Targeting X86
+-- Targeting XCore
+-- Not building UnicodeCharSetsGenerator because libxml2 is not available
+-- LLD version: 24.0.0
+-- Performing Test C_SUPPORTS_WERROR_IMPLICIT_FUNCTION_DECLARATION
+-- Performing Test C_SUPPORTS_WERROR_IMPLICIT_FUNCTION_DECLARATION - Success
+-- Performing Test C_SUPPORTS_WUNDEF
+-- Performing Test C_SUPPORTS_WUNDEF - Success
+-- Performing Test C_SUPPORTS_WERROR_MISMATCHED_TAGS
+-- Performing Test C_SUPPORTS_WERROR_MISMATCHED_TAGS - Failed
+-- Performing Test CXX_SUPPORTS_WNO_DEPRECTAED_COPY
+-- Performing Test CXX_SUPPORTS_WNO_DEPRECTAED_COPY - Success
+-- Performing Test C_SUPPORTS_WERROR_GLOBAL_CONSTRUCTOR
+-- Performing Test C_SUPPORTS_WERROR_GLOBAL_CONSTRUCTOR - Failed
+-- Performing Test CXX_SUPPORTS_WERROR_GLOBAL_CONSTRUCTOR
+-- Performing Test CXX_SUPPORTS_WERROR_GLOBAL_CONSTRUCTOR - Failed
+-- Could not find `nvcc` executable in any searched paths, please set CUDAToolkit_ROOT
+-- Searching for ocloc
+-- ocloc not found
+-- ocloc not found, MLIRXeVMTarget will not be able to use ocloc for native binary compilation.
+-- Performing Test COMPILER_SUPPORTS_WARNING_WEAK_VTABLES
+-- Performing Test COMPILER_SUPPORTS_WARNING_WEAK_VTABLES - Failed
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for dladdr
+-- Looking for dladdr - found
+-- Performing Test CLANG_HAVE_EMUTLS_GET_ADDRESS
+-- Performing Test CLANG_HAVE_EMUTLS_GET_ADDRESS - Success
+-- Clang version: 24.0.0git
+-- Looking for include file sys/inotify.h
+-- Looking for include file sys/inotify.h - found
+-- Performing Test HAVE_LINKER_FLAG_LONG_PLT
+-- Performing Test HAVE_LINKER_FLAG_LONG_PLT - Failed
+-- Found Perl: /usr/bin/perl (found version "5.32.1")
+-- Found Python3: ./.tools/bin/python3.9 (found version "3.9.25") found components: Interpreter
+-- Not building llvm-mt because libxml2 is not available
+-- Registering ExampleIRTransforms as a pass plugin (static build: OFF)
+-- Registering Bye as a pass plugin (static build: OFF)
+-- Google Benchmark version: v1.9.5, normalized to 1.9.5
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - found
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Success
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL - Success
+-- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST
+-- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST - Success
+-- Performing Test HAVE_CXX_FLAG_WCONVERSION
+-- Performing Test HAVE_CXX_FLAG_WCONVERSION - Success
+-- Performing Test HAVE_CXX_FLAG_WFORMAT_2
+-- Performing Test HAVE_CXX_FLAG_WFORMAT_2 - Success
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS - Success
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+CMake Warning at llvm-project/third-party/benchmark/CMakeLists.txt:329 (message):
+  Using std::regex with exceptions disabled is not fully supported
+
+
+-- Performing Test STEADY_CLOCK -- success
+-- Performing Test PTHREAD_AFFINITY -- success
+-- Configuring done (19.0s)
+-- Generating done (11.6s)
+-- Build files have been written to: llvm-build
+EXIT 0

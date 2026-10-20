@@ -1,0 +1,32 @@
+## n2_harness on large (full)
+### by shared object
+    93.30%  n2_harness           
+     6.39%  libc.so.6            
+     0.30%  [unknown]            
+     0.01%  ld-linux-aarch64.so.1
+### top symbols
+    36.97%  [.] <n2::load::Loader>::evaluate_path
+    21.08%  [.] <n2::parse::Parser>::read_eval
+    10.73%  [.] n2_harness::main
+     4.74%  [.] _rjem_malloc
+     3.17%  [.] memcmp
+     2.48%  [.] <n2::load::Loader>::add_build
+     2.40%  [.] <n2::eval::EvalString<&str>>::evaluate
+     1.52%  [.] _rjem_sdallocx
+     1.36%  [.] __GI___memmove_sve
+     1.35%  [.] __GI___memcpy_sve
+     1.20%  [.] <alloc::raw_vec::RawVecInner<_>>::reserve::do_reserve_and_handle::<alloc::alloc::Global>
+     1.17%  [.] _rjem_je_tcache_bin_flush_small
+     1.04%  [.] <hashbrown::raw::RawTable<(alloc::string::String, n2::graph::FileId)>>::reserve_rehash::<hashbrown::map::make_hasher<alloc::string::String, n2::graph::FileId, core::hash::BuildHasherDefault<rustc_hash::FxHasher>>::{closure#0}>
+     0.94%  [.] <n2::parse::Parser>::read_unevaluated_paths_to
+     0.91%  [.] <alloc::raw_vec::RawVecInner>::finish_grow
+     0.90%  [.] memmove@plt
+     0.86%  [.] <n2::parse::Parser>::read
+     0.70%  [.] tcache_bin_flush_edatas_lookup.constprop.0
+     0.56%  [.] _rjem_je_arena_cache_bin_fill_small
+     0.47%  [.] <n2::parse::Parser>::read_scoped_vars
+     0.42%  [.] do_rallocx
+     0.39%  [.] pthread_mutex_trylock@@GLIBC_2.34
+     0.34%  [.] _rjem_je_edata_heap_remove_first
+     0.33%  [.] <alloc::vec::Vec<n2::graph::FileId> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<n2::graph::FileId, core::iter::adapters::map::Map<alloc::vec::into_iter::IntoIter<n2::eval::EvalString<&str>>, <n2::load::Loader>::evaluate_paths::{closure#0}>>>::from_iter
+     0.30%  [k] 0xffff800080e23b84

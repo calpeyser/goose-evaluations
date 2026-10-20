@@ -1,0 +1,76 @@
+== yaml_goose
+    24.12%  yaml_goose             [.] scan_plain_g.constprop.0
+    18.31%  yaml_goose             [.] main
+    12.49%  yaml_goose             [.] emit_str_g_36
+     9.44%  yaml_goose             [.] parse_here_g.constprop.0
+     6.79%  yaml_goose             [.] walk_g_38.constprop.0
+     6.16%  yaml_goose             [.] skip_blank_g.constprop.0
+     4.65%  yaml_goose             [.] parse_map_g.constprop.0
+     3.62%  libc.so.6              [.] __GI___memcpy_sve
+     3.46%  yaml_goose             [.] gs_memcpy
+     3.24%  yaml_goose             [.] parse_value_g.constprop.0
+     2.01%  yaml_goose             [.] scan_quoted_g.constprop.0
+     1.23%  yaml_goose             [.] is_doc_marker_g.constprop.0
+     1.10%  yaml_goose             [.] eat_brk_g.constprop.0
+     1.06%  [unknown]              [k] 0xffff800080e23b84
+     0.77%  yaml_goose             [.] walk_g_37.constprop.0
+     0.39%  yaml_goose             [.] walk_g_35.constprop.0
+     0.33%  yaml_goose             [.] parse_seq_g.constprop.0
+     0.30%  yaml_goose             [.] map_node_g.constprop.0
+== c_twin
+    24.57%  c_twin                 [.] emit_str
+    23.22%  c_twin                 [.] scan_plain
+    17.63%  c_twin                 [.] main
+     7.68%  c_twin                 [.] parse_here
+     4.75%  c_twin                 [.] walk
+     4.68%  c_twin                 [.] skip_blank
+     4.57%  c_twin                 [.] str_bytes
+     2.45%  c_twin                 [.] parse_value
+     2.11%  c_twin                 [.] parse_map
+     1.62%  c_twin                 [.] block_breaks
+     1.37%  c_twin                 [.] scan_quoted
+     1.26%  c_twin                 [.] is_doc_marker
+     1.21%  libc.so.6              [.] __GI___memcpy_sve
+     0.96%  c_twin                 [.] coll_node
+     0.66%  c_twin                 [.] eat_brk
+     0.33%  c_twin                 [.] _init
+     0.33%  [unknown]              [k] 0xffff800080e23b84
+     0.22%  c_twin                 [.] parse_seq
+== ryml_row
+    15.39%  ryml_row               [.] emit_str
+    10.30%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_scan_scalar_plain_blck
+     9.56%  ryml_row               [.] main
+     9.40%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_scan_line
+     7.95%  ryml_row               [.] c4::yml::Tree::_clear_range
+     6.24%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_handle_map_block
+     4.67%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_peek_next_line
+     3.24%  ryml_row               [.] walk
+     3.18%  libc.so.6              [.] __GI___memcpy_sve
+     3.10%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_line_progressed
+     3.04%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::filter_scalar_block_literal_in_place
+     2.89%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_maybe_skip_comment
+     2.62%  [unknown]              [k] 0xffff800080e23b84
+     2.45%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_scan_block
+     1.48%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::filter_scalar_plain_in_place
+     1.08%  ryml_row               [.] c4::yml::Tree::_claim
+     0.96%  ryml_row               [.] c4::yml::EventHandlerTree::_push
+     0.91%  ryml_row               [.] c4::yml::ParseEngine<c4::yml::EventHandlerTree>::_handle_seq_block
+== yamlcpp_row
+    36.22%  yamlcpp_row            [.] YAML::RegEx::MatchUnchecked<YAML::StreamCharSource>
+     5.31%  yamlcpp_row            [.] YAML::Stream::StreamInUtf8
+     4.65%  yamlcpp_row            [.] YAML::Stream::_ReadAheadTo
+     3.34%  yamlcpp_row            [.] YAML::ScanScalar[abi:cxx11]
+     3.28%  libc.so.6              [.] malloc_consolidate
+     3.00%  libc.so.6              [.] _int_malloc
+     2.91%  libc.so.6              [.] unlink_chunk.constprop.0
+     2.60%  yamlcpp_row            [.] YAML::Stream::operator bool
+     2.43%  yamlcpp_row            [.] std::_Rb_tree<std::shared_ptr<YAML::detail::node>, std::shared_ptr<YAML::detail::node>, std::_Identity<std::shared_ptr<YAML::detail::node> >, std::less<std::shared_ptr<YAML::detail::node> >, std::allocator<std::shared_ptr<YAML::detail::node> > >::_M_get_insert_unique_pos
+     2.30%  libc.so.6              [.] _int_free
+     2.23%  libc.so.6              [.] malloc
+     2.02%  yamlcpp_row            [.] YAML::Scanner::EnsureTokensInQueue
+     1.86%  yamlcpp_row            [.] YAML::Stream::AdvanceCurrent
+     1.61%  yamlcpp_row            [.] YAML::Stream::peek
+     1.55%  libc.so.6              [.] cfree@GLIBC_2.17
+     1.34%  yamlcpp_row            [.] std::_Rb_tree<std::shared_ptr<YAML::detail::node>, std::shared_ptr<YAML::detail::node>, std::_Identity<std::shared_ptr<YAML::detail::node> >, std::less<std::shared_ptr<YAML::detail::node> >, std::allocator<std::shared_ptr<YAML::detail::node> > >::_M_erase
+     1.19%  yamlcpp_row            [.] emit_str
+     0.95%  yamlcpp_row            [.] YAML::Scanner::ScanToNextToken

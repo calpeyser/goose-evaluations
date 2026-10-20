@@ -1,0 +1,10 @@
+[package]
+name = "n2_harness"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+n2 = { path = "../../../.deps/n2" }  # build.sh points this at $DEPS/n2
+
+[profile.release]
+lto = true
