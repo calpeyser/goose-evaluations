@@ -28,7 +28,7 @@ Each evaluation's README has the full tables, where the time goes, and the cases
 JSON with many decimal numbers (6.8 times slower than yyjson, because Goose's float printer is
 exact and slow), and jq filters that recurse deeply or grow an array step by step.
 
-## Run it in about 30 minutes
+## Run it in about 30 minutes or less
 
 You need a Linux machine with git, gcc and g++ 11 or newer, make, Python 3, curl, and Rust (cargo).
 perf must be able to count user cycles (`perf_event_paranoid` 2 or less). On Amazon Linux,
@@ -36,16 +36,17 @@ perf must be able to count user cycles (`perf_event_paranoid` 2 or less). On Ama
 
 ```bash
 git clone https://github.com/calpeyser/goose-evaluations && cd goose-evaluations
-bin/build-all                    # goose and every baseline at the pinned commits (about 20 minutes)
-bin/fetch-inputs --size small    # about 1 MB per input, and one 136 MB download (about 2 minutes)
-bin/run-all --size small         # every row, checked and timed (about 3 minutes)
+bin/build-all                    # goose and every baseline at the pinned commits (7 to 20 minutes)
+bin/fetch-inputs --size small    # about 1 MB per input, and one 136 MB download (under a minute)
+bin/run-all --size small         # every row, checked and timed (under a minute)
 ```
 
 `bin/run-all` writes `.out/tables.md`. For each input it says whether the rows agree with each other,
 and whether each checksum equals the one in the committed results. Use `--size medium`, `large` or
 `all` for the larger inputs. Run it on an idle machine: other load shows in the times.
 
-Our own run from a fresh clone is in [results/clean-clone-run.md](results/clean-clone-run.md).
+Our own run from a fresh clone took 7.4 minutes, and every check passed:
+[results/clean-clone-run.md](results/clean-clone-run.md).
 
 What a fresh clone does not reproduce:
 
@@ -67,6 +68,7 @@ What a fresh clone does not reproduce:
 | `bin/env.sh` | the pinned commits and the paths every script uses |
 | [machine.md](machine.md) | the machine, the compilers, and how times were taken |
 | [THIRD_PARTY.md](THIRD_PARTY.md) | every baseline and data source, with its commit and license |
+| [results/clean-clone-run.md](results/clean-clone-run.md) | our run of the three steps from a fresh clone, with its tables |
 
 Each evaluation folder has:
 
