@@ -1,0 +1,34 @@
++---------------------------------------------------------------------------------------------------------------------+
+|                                     parse benchmark: big_scalar_dquot_multiline                                     |
++------------------------------------------+---------+---------+----------+---------------+-------------+-------------+
+| function                                 |    MB/s | MB/s(x) |  MB/s(%) | cpu time (ms) | cpu time(x) | cpu time(%) |
++------------------------------------------+---------+---------+----------+---------------+-------------+-------------+
+| ryml_ints_yaml_inplace_reuse_nofilter    |  784.90 |   2.47x |  146.87% |          1.38 |       0.41x |     -59.49% |
+| ryml_ints_yaml_inplace_reuse             |  250.45 |   0.79x |  -21.23% |          4.32 |       1.27x |      26.95% |
+| ryml_ints_yaml_inplace_nofilter_reserve  |  768.34 |   2.42x |  141.66% |          1.41 |       0.41x |     -58.62% |
+| ryml_ints_yaml_inplace_nofilter          |  392.50 |   1.23x |   23.45% |          2.76 |       0.81x |     -19.00% |
+| ryml_ints_yaml_inplace_reserve           |  248.96 |   0.78x |  -21.70% |          4.35 |       1.28x |      27.71% |
+| ryml_ints_yaml_inplace                   |  125.13 |   0.39x |  -60.64% |          8.65 |       2.54x |     154.09% |
+| ryml_yaml_inplace_reuse_nofilter_reserve |  776.69 |   2.44x |  144.29% |          1.39 |       0.41x |     -59.06% |
+| ryml_yaml_inplace_reuse_nofilter         |  776.13 |   2.44x |  144.11% |          1.40 |       0.41x |     -59.03% |
+| ryml_yaml_inplace_reuse_reserve          |  249.28 |   0.78x |  -21.59% |          4.34 |       1.28x |      27.54% |
+| ryml_yaml_inplace_reuse                  |  249.35 |   0.78x |  -21.57% |          4.34 |       1.28x |      27.51% |
+| ryml_yaml_arena_reuse_nofilter_reserve   |  758.87 |   2.39x |  138.68% |          1.43 |       0.42x |     -58.10% |
+| ryml_yaml_arena_reuse_nofilter           |  743.56 |   2.34x |  133.87% |          1.46 |       0.43x |     -57.24% |
+| ryml_yaml_arena_reuse_reserve            |  247.58 |   0.78x |  -22.13% |          4.37 |       1.28x |      28.42% |
+| ryml_yaml_arena_reuse                    |  247.57 |   0.78x |  -22.13% |          4.37 |       1.28x |      28.43% |
+| ryml_yaml_inplace_nofilter_reserve       |  774.33 |   2.44x |  143.54% |          1.40 |       0.41x |     -58.94% |
+| ryml_yaml_inplace_nofilter               |  758.92 |   2.39x |  138.70% |          1.43 |       0.42x |     -58.11% |
+| ryml_yaml_inplace_reserve                |  249.00 |   0.78x |  -21.68% |          4.35 |       1.28x |      27.69% |
+| ryml_yaml_inplace                        |  247.44 |   0.78x |  -22.18% |          4.38 |       1.28x |      28.49% |
+| ryml_yaml_arena_nofilter_reserve         |  758.58 |   2.39x |  138.59% |          1.43 |       0.42x |     -58.09% |
+| ryml_yaml_arena_nofilter                 |  743.47 |   2.34x |  133.84% |          1.46 |       0.43x |     -57.24% |
+| ryml_yaml_arena_reserve                  |  247.28 |   0.78x |  -22.22% |          4.38 |       1.29x |      28.57% |
+| ryml_yaml_arena                          |  245.71 |   0.77x |  -22.72% |          4.41 |       1.29x |      29.40% |
+| libyaml_arena                            |  134.94 |   0.42x |  -57.56% |          8.02 |       2.36x |     135.62% |
+| libyaml_arena_reuse                      |  135.29 |   0.43x |  -57.45% |          8.00 |       2.35x |     135.00% |
+| libfyaml_arena                           |  215.69 |   0.68x |  -32.16% |          5.02 |       1.47x |      47.41% |
+| yamlcpp_arena                            |  317.94 |   1.00x |    0.00% |          3.41 |       1.00x |       0.00% |
++------------------------------------------+---------+---------+----------+---------------+-------------+-------------+ 
+
+

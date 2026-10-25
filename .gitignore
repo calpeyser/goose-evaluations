@@ -4,3 +4,5 @@
 .out/
 target/
 __pycache__/
+# Temporary files that rapidyaml's bm_emit writes into its working folder.
+_c4fs_tmpname_*
