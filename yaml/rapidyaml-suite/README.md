@@ -5,7 +5,8 @@ The first tree is rapidyaml `master` at `c42152f2`. The second tree is our branc
 the node array grows. The branch is `grow-untouched-tail` on
 [calpeyser/rapidyaml](https://github.com/calpeyser/rapidyaml/tree/grow-untouched-tail), one commit,
 `5e3f3342`. We measured `0507bcdd`. Its library sources are the same as `5e3f3342`. Only one test file
-differs.
+differs. The branch was then rewritten once more as `65807b47` (comments removed, no logic change), and that is the
+commit in the upstream PR, [biojppm/rapidyaml#675](https://github.com/biojppm/rapidyaml/pull/675), opened 2026-10-26.
 The [yaml evaluation](../README.md) in this repository is where the change came from.
 
 On a large Kubernetes stream parsed into a new tree, the branch takes 0.61 to 0.67 of master's
